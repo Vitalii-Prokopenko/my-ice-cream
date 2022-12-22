@@ -1,0 +1,35 @@
+// === Variables ===
+
+// Fonts
+$mainFont: 'Montserrat', sans-serif;
+$secondaryFont: 'Seymour One', sans-serif;
+
+// Text colors
+$mainTextColor: #131313;
+$secondaryTextColor: ;
+$mainLightTextColor: ;
+$secondaryLightTextColor: ;
+$disabledTextColor: ;
+$thirdLightTextColor: ;
+$accentColor: #f8d24e;
+
+// Background colors
+$mainBgColor: #84a278;
+$secondaryBgColor: #fcfcfc;
+$darkBgColor: ;
+$mobileMenuBgColor: ;
+
+// Border colors
+
+// Breakpoints
+$minMobile: 480px;
+$minTablet: 768px;
+$minDesktop: 1200px;
+
+// Transitions
+$myColorTransition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+$myBgColorTransition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+$myFillTransition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+$myTransformTransition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// Other variables
