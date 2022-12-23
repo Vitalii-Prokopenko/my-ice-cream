@@ -5,12 +5,17 @@ body {
   background-color: #84a278;
 }
 
+header,
+section,
+footer {
+  outline: 1px solid tomato;
+}
+
 .container {
   padding-right: 16px;
   padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
-  height: 1937px;
 }
 @media screen and (min-width: 480px) {
   .container {

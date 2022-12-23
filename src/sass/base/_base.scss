@@ -5,3 +5,9 @@ body {
   color: $mainTextColor;
   background-color: $mainBgColor;
 }
+
+header,
+section,
+footer {
+  outline: 1px solid tomato;
+}
