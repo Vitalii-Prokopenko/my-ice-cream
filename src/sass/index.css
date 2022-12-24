@@ -266,6 +266,17 @@ footer {
   fill: #f8d24e;
 }
 
+/* === HERO === */
+.hero__page-title {
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.2692307692;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+}
+
 /* === FOOTER ==== */
 .footer-upper-container {
   padding: 0 20px 40px;
@@ -406,7 +417,7 @@ footer {
 }
 .footer__phone-wrap {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 .footer__phone-text {
