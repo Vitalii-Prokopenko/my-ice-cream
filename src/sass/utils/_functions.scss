@@ -1,0 +1,5 @@
+// Function returns the width of element in grid depending on the number of elements in a row and the width of gaps between them
+
+@function cardWidth($nElement, $gapWidth) {
+  @return calc((100% - $gapWidth * ($nElement - 1)) / $nElement);
+}
