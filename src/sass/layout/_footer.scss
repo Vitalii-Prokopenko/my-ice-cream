@@ -142,7 +142,7 @@
     font-size: 12px;
     line-height: calc(22 / 12);
 
-    color: $secondaryTextColor;
+    color: $secondaryColor;
 
     @include only-tablet {
       font-size: 14px;
@@ -161,7 +161,7 @@
     font-size: 12px;
     line-height: calc(22 / 12);
 
-    color: $secondaryBgColor;
+    color: $phoneContactColor;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -178,7 +178,7 @@
 
     &:hover,
     &:focus {
-      color: $accentColor;
+      color: $mainAccentColor;
     }
   }
 
@@ -188,7 +188,7 @@
     line-height: calc(21 / 14);
     text-transform: capitalize;
 
-    color: #7a7a7a;
+    color: $rightsColor;
 
     @include only-tablet {
       line-height: calc(26 / 14);
@@ -245,7 +245,7 @@
   height: 34px;
   border-radius: 50%;
 
-  background-color: $accentColor;
+  background-color: $mainAccentColor;
 
   &-icon {
     fill: $mainBgColor;
@@ -254,6 +254,6 @@
 
   &:hover &-icon,
   &:focus &-icon {
-    fill: $secondaryBgColor;
+    fill: $mainColor;
   }
 }
