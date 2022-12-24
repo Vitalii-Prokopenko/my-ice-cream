@@ -1,7 +1,7 @@
 // Mixin for mobile styles
 
 @mixin only-mobile {
-  @media screen and (min-width: $minMobile) and (max-width: calc($minTablet - 1px)) {
+  @media screen and (max-width: calc($minTablet - 1px)) {
     @content;
   }
 }

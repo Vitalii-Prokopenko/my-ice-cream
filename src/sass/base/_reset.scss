@@ -1,0 +1,46 @@
+/* == GLOBAL STYLES RESET == */
+
+/* headings and paragraphs */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ul */
+
+.list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* button */
+
+.btn {
+  cursor: pointer;
+}
+
+/* img */
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* a */
+
+.link {
+  display: block;
+
+  text-decoration: none;
+  color: inherit;
+}

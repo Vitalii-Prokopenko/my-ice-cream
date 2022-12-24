@@ -1,0 +1,20 @@
+/* === BUTTONS === */
+
+.btn-products {
+  @extend %btn-transparent-bg;
+
+  width: 134px;
+  height: 42px;
+
+  border-radius: 10px;
+
+  @include only-mobile {
+    width: 108px;
+    height: 38px;
+
+    font-size: 12px;
+    line-height: calc(15 / 12);
+
+    border-radius: 8px;
+  }
+}
