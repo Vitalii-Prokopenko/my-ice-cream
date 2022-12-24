@@ -43,3 +43,12 @@
     @include button-border($secondaryAccentColor);
   }
 }
+
+// Buttons with transparent background and without border
+
+%btn-transparent-bg-no-border {
+  @extend %btn-text;
+
+  background-color: transparent;
+  border: none;
+}

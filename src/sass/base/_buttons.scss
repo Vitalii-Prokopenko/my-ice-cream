@@ -6,7 +6,7 @@
   width: 134px;
   height: 42px;
 
-  @include only-mobile {
+  @include less-then-tablet {
     width: 108px;
     height: 38px;
 
@@ -58,7 +58,7 @@
 }
 
 .btn-how-its-made {
-  @extend %btn-transparent-bg;
+  @extend %btn-transparent-bg-no-border;
 
   width: 154px;
   height: 40px;
@@ -66,20 +66,23 @@
   line-height: calc(17 / 14);
   text-decoration: underline;
 
-  @include button-border(transparent);
   color: $mainAccentColor;
 
-  @include mobile-and-tablet {
+  @include less-then-desktop {
     font-size: 12px;
     line-height: calc(15 / 12);
   }
 
-  &:hover,
-  &:focus {
-    @include button-border(transparent);
+  @include less-then-tablet {
+    width: 100px;
+    height: 24px;
   }
 
   &:hover {
     color: $secondaryAccentColor;
+  }
+
+  &:focus {
+    color: $mainColor;
   }
 }

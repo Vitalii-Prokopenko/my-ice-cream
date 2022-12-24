@@ -1,7 +1,23 @@
 /* === HERO === */
 
 .hero {
+  height: 441px;
+
+  &__container {
+    // position: relative;
+    padding-top: 38px;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    outline: 1px solid blue;
+  }
+
   &__page-title {
+    margin-bottom: 32px;
+    width: 247px;
+
     font-family: $secondaryFont;
     font-weight: 400;
     font-size: 26px;
@@ -10,5 +26,53 @@
     text-transform: uppercase;
 
     color: $mainColor;
+
+    &--accent {
+      font-size: 34px;
+      line-height: calc(33 / 34);
+    }
+  }
+
+  &__button-list {
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__button-item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__img-plate,
+  &__text,
+  &__place-list {
+    @include less-then-tablet {
+      display: none;
+    }
+  }
+
+  &__img-wrap {
+    margin: 0 auto;
+    position: relative;
+    width: 320px;
+    height: 217px;
+    outline: 1px solid blueviolet;
+  }
+
+  &__img-ice-cream {
+    position: absolute;
+    bottom: 0;
+    left: 26%;
+
+    width: 177px;
+    height: 100%;
+  }
+
+  &__img-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
   }
 }

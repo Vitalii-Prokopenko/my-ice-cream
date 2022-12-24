@@ -2,25 +2,28 @@
 <section class="hero">
   <div class="container hero__container">
     <h1 class="hero__page-title">
-      ice cream made with <span class="hero__page-title">passion</span>
+      ice cream made with <span class="hero__page-title--accent">passion</span>
     </h1>
-    <ul class="list">
-      <li><button class="btn btn-products" type="button">Products</button></li>
-      <li>
+    <ul class="list hero__button-list">
+      <li class="hero__button-item">
+        <button class="btn btn-products" type="button">Products</button>
+      </li>
+      <li class="hero__button-item">
         <button class="btn btn-how-its-made" type="button">
           How it’s made?
         </button>
       </li>
     </ul>
     <img
+      class="hero__img-plate"
       src="./images/plate/png/plate-ice-cream-tablet-152.png"
       alt="plate with ice-cream"
     />
-    <p>
+    <p class="hero__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et
     </p>
-    <ul class="list">
+    <ul class="list hero__place-list">
       <li>
         <p>16</p>
         <p>cafes</p>
@@ -30,10 +33,17 @@
         <p>food trucks</p>
       </li>
     </ul>
-    <img
-      src="./images/ice-cream/png/ice-cream-mobile-177.png"
-      alt="ice cream in a waffle cup"
-    />
-    <img src="./images/dots/png/dots-mobile-320.png" alt="yellow dots" />
+    <div class="hero__img-wrap">
+      <img
+        class="hero__img-ice-cream"
+        src="./images/ice-cream/png/ice-cream-mobile-177.png"
+        alt="ice cream in a waffle cup"
+      />
+      <img
+        class="hero__img-dots"
+        src="./images/dots/png/dots-mobile-320.png"
+        alt="yellow dots"
+      />
+    </div>
   </div>
 </section>
