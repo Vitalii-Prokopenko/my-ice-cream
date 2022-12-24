@@ -6,8 +6,6 @@
   width: 134px;
   height: 42px;
 
-  border-radius: 10px;
-
   @include only-mobile {
     width: 108px;
     height: 38px;
@@ -16,5 +14,72 @@
     line-height: calc(15 / 12);
 
     border-radius: 8px;
+  }
+}
+
+.btn-read-more,
+.btn-locations,
+.btn-buy-now,
+.btn-franchise {
+  @include flex-center();
+
+  height: 42px;
+
+  &__icon {
+    fill: inherit;
+  }
+
+  &:focus &__icon {
+    fill: $mainColor;
+  }
+}
+
+.btn-read-more,
+.btn-locations,
+.btn-buy-now {
+  @extend %btn-colored-bg;
+}
+
+.btn-franchise {
+  @extend %btn-transparent-bg;
+}
+
+.btn-read-more {
+  width: 164px;
+}
+
+.btn-locations,
+.btn-franchise {
+  width: 196px;
+}
+
+.btn-buy-now {
+  width: 152px;
+}
+
+.btn-how-its-made {
+  @extend %btn-transparent-bg;
+
+  width: 154px;
+  height: 40px;
+
+  line-height: calc(17 / 14);
+  text-decoration: underline;
+
+  @include button-border(transparent);
+  color: $mainAccentColor;
+
+  @include mobile-and-tablet {
+    font-size: 12px;
+    line-height: calc(15 / 12);
+  }
+
+  &:hover,
+  &:focus {
+    @include button-border(transparent);
+  }
+
+  &:hover {
+    color: $secondaryAccentColor;
   }
 }

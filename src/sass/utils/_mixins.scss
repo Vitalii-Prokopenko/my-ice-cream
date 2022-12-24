@@ -53,3 +53,11 @@
 @mixin button-border($btnBorderColor) {
   border: 2px solid $btnBorderColor;
 }
+
+// Flex-center-2-axis
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
