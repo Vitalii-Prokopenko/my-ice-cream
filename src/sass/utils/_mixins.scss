@@ -1,7 +1,7 @@
 // Mixin for mobile styles
 
 @mixin only-mobile {
-  @media screen and (min-width: $minMobile) and (max-width: calc($minTablet - 1px)) {
+  @media screen and (max-width: calc($minTablet - 1px)) {
     @content;
   }
 }
@@ -52,4 +52,12 @@
 
 @mixin button-border($btnBorderColor) {
   border: 2px solid $btnBorderColor;
+}
+
+// Flex-center-2-axis
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
