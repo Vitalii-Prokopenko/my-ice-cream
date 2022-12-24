@@ -47,3 +47,9 @@
     @content;
   }
 }
+
+// Mixin for button border styles
+
+@mixin button-border($btnBorderColor) {
+  border: 2px solid $btnBorderColor;
+}

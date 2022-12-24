@@ -1,0 +1,41 @@
+// Text values for buttons
+
+%btn-text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+
+  color: $buttonTextColor;
+
+  &:focus {
+    color: $mainColor;
+  }
+}
+
+// Buttons with transparent background
+
+%btn-transparent-bg {
+  @extend %btn-text;
+
+  background-color: transparent;
+
+  @include button-border($mainAccentColor);
+
+  &:hover,
+  &:focus {
+    @include button-border($secondaryAccentColor);
+  }
+}
+
+// Buttons with colored background
+
+%btn-colored-bg {
+  @extend %btn-text;
+
+  background-color: $mainAccentColor;
+
+  &:hover,
+  &:focus {
+    background-color: $secondaryAccentColor;
+  }
+}
