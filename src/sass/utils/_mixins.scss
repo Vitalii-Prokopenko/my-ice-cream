@@ -1,12 +1,20 @@
-// Mixin for mobile styles
+// Mixin for adaptive mobile styles 480px - 767px
 
 @mixin only-mobile {
+  @media screen and (min-width: $minMobile) and (max-width: calc($minTablet - 1px)) {
+    @content;
+  }
+}
+
+// Mixin for responsive and adaptive mobile styles 0px - 767px
+
+@mixin less-then-tablet {
   @media screen and (max-width: calc($minTablet - 1px)) {
     @content;
   }
 }
 
-// Mixin for tablet styles
+// Mixin for tablet styles 768px - 1199px
 
 @mixin only-tablet {
   @media screen and (min-width: $minTablet) and (max-width: calc($minDesktop - 1px)) {
@@ -14,7 +22,15 @@
   }
 }
 
-// Mixin for desktop styles
+// Mixin for mobile and tablet styles 0px - 1199px
+
+@mixin less-then-desktop {
+  @media screen and (max-width: calc($minDesktop - 1px)) {
+    @content;
+  }
+}
+
+// Mixin for desktop styles 1200px +
 
 @mixin only-desktop {
   @media screen and (min-width: $minDesktop) {
@@ -22,7 +38,7 @@
   }
 }
 
-// Mixin for common mobile and tablet styles
+// Mixin for common mobile and tablet styles 480px - 1199px
 
 @mixin mobile-and-tablet {
   @media screen and (min-width: $minMobile) and (max-width: calc($minDesktop - 1px)) {
@@ -30,10 +46,26 @@
   }
 }
 
-// Mixin for common tablet and desktop styles
+// Mixin for common tablet and desktop styles 768px +
 
 @mixin tablet-and-desktop {
   @media screen and (min-width: $minTablet) {
+    @content;
+  }
+}
+
+// Mixin for mobile styles not more than 480px
+
+@mixin not-more-than-mobile {
+  @media screen and (max-width: $minMobile) {
+    @content;
+  }
+}
+
+// Mixin for mobile and tablet styles not more than 768px
+
+@mixin not-more-than-tablet {
+  @media screen and (max-width: calc($minTablet - 1px)) {
     @content;
   }
 }

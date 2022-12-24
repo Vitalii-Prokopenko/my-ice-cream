@@ -1,1 +1,85 @@
+/* === HEADER === */
 
+.header {
+  &__container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    flex-basis: 69.5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    // margin-right: 308px;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include less-then-desktop {
+      display: none;
+    }
+  }
+
+  &__menu-item:not(:last-child) {
+    margin-right: 28px;
+  }
+
+  &__menu-link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+
+    &:hover,
+    &:focus {
+      color: $mainAccentColor;
+    }
+  }
+
+  &__button-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__buy-now {
+    @include less-then-tablet {
+      display: none;
+    }
+  }
+}
+
+.mobile-menu-open {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  @include only-tablet {
+    margin-right: 32px;
+  }
+
+  @include only-desktop {
+    display: none;
+  }
+
+  &__icon {
+    fill: $phoneContactColor;
+  }
+
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: $mainAccentColor;
+  }
+}

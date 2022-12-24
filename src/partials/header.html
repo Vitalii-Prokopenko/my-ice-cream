@@ -1,18 +1,45 @@
-<!-- HEADER -->
-<div class="container">
-  <nav class="page-nav">
-    <a href="" class="link logo">logo</a>
-    <ul class="list">
-      <li><a href="" class="link">Home</a></li>
-      <li><a href="" class="link">How it’s made?</a></li>
-      <li><a href="" class="link">Our products</a></li>
-      <li><a href="" class="link">Contact</a></li>
+<!-- === HEADER === -->
+<div class="container header__container">
+  <!-- Page navigation -->
+  <nav class="header__nav">
+    <!-- Logo -->
+    <a href="" class="link header__logo">
+      <img
+        src="./images/logo/logo-60-65.png"
+        alt="logo"
+        width="60"
+        height="65"
+      />
+    </a>
+    <!-- Menu -->
+    <ul class="list header__menu">
+      <li class="header__menu-item">
+        <a href="" class="link header__menu-link">Home</a>
+      </li>
+      <li class="header__menu-item">
+        <a href="" class="link header__menu-link">How it’s made?</a>
+      </li>
+      <li class="header__menu-item">
+        <a href="" class="link header__menu-link">Our products</a>
+      </li>
+      <li class="header__menu-item">
+        <a href="" class="link header__menu-link">Contact</a>
+      </li>
     </ul>
   </nav>
-  <button class="btn btn-buy-now">
-    Buy now
-    <svg class="btn-buy-now__icon" width="12" height="12">
-      <use href="./images/icons/svg-icons.svg#icon-right-arrow"></use>
-    </svg>
-  </button>
+  <div class="header__button-wrap">
+    <!-- Mobile menu open button -->
+    <button class="btn mobile-menu-open">
+      <svg class="mobile-menu-open__icon" width="32" height="32">
+        <use href="./images/icons/svg-icons.svg#icon-burger"></use>
+      </svg>
+    </button>
+    <!-- Button Buy now -->
+    <button class="btn btn-buy-now header__buy-now">
+      Buy now
+      <svg class="btn-buy-now__icon" width="12" height="12">
+        <use href="./images/icons/svg-icons.svg#icon-right-arrow"></use>
+      </svg>
+    </button>
+  </div>
 </div>

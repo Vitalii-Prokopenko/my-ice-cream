@@ -92,8 +92,7 @@ footer {
 }
 
 .container {
-  padding-right: 16px;
-  padding-left: 16px;
+  padding: 0 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -104,11 +103,13 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .container {
+    padding: 0 32px;
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
+    padding: 0 16px;
     width: 1200px;
   }
 }
@@ -118,7 +119,7 @@ footer {
   width: 134px;
   height: 42px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .btn-products {
     width: 108px;
     height: 38px;
@@ -194,6 +195,75 @@ footer {
 }
 .btn-how-its-made:hover {
   color: #0a8817;
+}
+
+/* === HEADER === */
+.header__container {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  flex-basis: 69.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1199px) {
+  .header__menu {
+    display: none;
+  }
+}
+.header__menu-item:not(:last-child) {
+  margin-right: 28px;
+}
+.header__menu-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.header__menu-link:hover, .header__menu-link:focus {
+  color: #f8d24e;
+}
+.header__button-wrap {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .header__buy-now {
+    display: none;
+  }
+}
+
+.mobile-menu-open {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .mobile-menu-open {
+    margin-right: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mobile-menu-open {
+    display: none;
+  }
+}
+.mobile-menu-open__icon {
+  fill: #ffffff;
+}
+.mobile-menu-open:hover .mobile-menu-open__icon, .mobile-menu-open:focus .mobile-menu-open__icon {
+  fill: #f8d24e;
 }
 
 /* === FOOTER ==== */
