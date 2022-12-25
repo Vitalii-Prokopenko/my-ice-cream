@@ -8,6 +8,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include only-tablet {
+      padding-top: 20px;
+      padding-bottom: 14px;
+    }
+
+    @include only-desktop {
+      padding-top: 8px;
+      padding-bottom: 31px;
+    }
   }
 
   &__nav {
