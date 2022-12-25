@@ -6,7 +6,7 @@ body {
   background-color: $mainBgColor;
 }
 
-section,
+section:not(.hero),
 footer {
   outline: 1px solid tomato;
 }

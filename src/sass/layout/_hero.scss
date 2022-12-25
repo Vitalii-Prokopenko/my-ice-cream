@@ -3,15 +3,42 @@
 .hero {
   height: 441px;
 
+  @include only-tablet {
+    height: 337px;
+  }
+
+  @include only-desktop {
+    height: 560px;
+  }
+
   &__container {
-    // position: relative;
     padding-top: 38px;
 
     display: flex;
     flex-direction: column;
 
     height: 100%;
-    outline: 1px solid blue;
+    // outline: 1px solid blue;
+
+    @include tablet-and-desktop {
+      padding-top: 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include tablet-and-desktop {
+      padding-top: 14px;
+
+      position: relative;
+    }
+  }
+
+  &__wrap {
+    max-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   &__page-title {
@@ -27,27 +54,156 @@
 
     color: $mainColor;
 
+    @include only-tablet {
+      margin-bottom: 24px;
+    }
+
+    @include only-desktop {
+      margin-bottom: 28px;
+
+      width: 367px;
+
+      font-size: 38px;
+      line-height: calc(48 / 38);
+    }
+
     &--accent {
       font-size: 34px;
       line-height: calc(33 / 34);
+
+      @include only-desktop {
+        font-size: 38px;
+        line-height: calc(48 / 38);
+      }
     }
   }
 
   &__button-list {
-    margin-bottom: auto;
+    margin-bottom: 19px;
     display: flex;
     align-items: center;
+
+    @include only-tablet {
+      margin-bottom: 12px;
+    }
+
+    @include only-desktop {
+      margin-bottom: 42px;
+    }
   }
 
   &__button-item:not(:last-child) {
     margin-right: 12px;
   }
 
-  &__img-plate,
-  &__text,
+  &__plate-wrap {
+    display: flex;
+    align-items: center;
+
+    @include only-desktop {
+      // align-items: stretch;
+    }
+  }
+
+  &__plate-picture,
+  &__text-wrap,
   &__place-list {
     @include less-then-tablet {
       display: none;
+    }
+  }
+
+  &__plate-picture {
+    margin-right: 32px;
+
+    @include only-desktop {
+      margin-right: 16px;
+    }
+  }
+
+  &__plate-img {
+    @include only-tablet {
+      width: 152px;
+      height: 152px;
+    }
+
+    @include only-desktop {
+      width: 225px;
+      height: 225px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 12px;
+    width: 139px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(17 / 12);
+
+    color: $mainColor;
+
+    @include only-desktop {
+      margin-top: 29px;
+      margin-bottom: 24px;
+      width: 200px;
+
+      font-size: 14px;
+      line-height: calc(20 / 14);
+    }
+
+    &-icon {
+      fill: $mainColor;
+    }
+  }
+
+  &__place-list {
+    margin-top: 14px;
+
+    @include only-desktop {
+      margin-top: 8px;
+    }
+  }
+
+  &__place-item {
+    text-align: right;
+  }
+
+  &__place-item:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include only-desktop {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__place-number {
+    margin-bottom: 4px;
+
+    font-weight: 900;
+    font-size: 28px;
+    line-height: calc(34 / 28);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $secondaryColor;
+
+    @include only-desktop {
+      font-size: 46px;
+      line-height: calc(56 / 46);
+    }
+  }
+
+  &__place-name {
+    font-weight: 400;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+
+    color: $mainColor;
+
+    @include only-desktop {
+      font-size: 14px;
+      line-height: calc(17 / 14);
     }
   }
 
@@ -56,7 +212,23 @@
     position: relative;
     width: 320px;
     height: 217px;
-    outline: 1px solid blueviolet;
+    // outline: 1px solid blueviolet;
+
+    @include only-tablet {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 768px;
+      height: 329px;
+    }
+
+    @include only-desktop {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1200px;
+      height: 560px;
+    }
   }
 
   &__img-ice-cream {
@@ -66,12 +238,23 @@
 
     width: 177px;
     height: 100%;
+
+    @include only-tablet {
+      width: 268px;
+      left: 408px;
+    }
+
+    @include only-desktop {
+      width: 456px;
+      left: 652px;
+    }
   }
 
   &__img-dots {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: -1;
 
     width: 100%;
   }

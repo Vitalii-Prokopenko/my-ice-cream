@@ -6,7 +6,7 @@
   width: 134px;
   height: 42px;
 
-  @include less-then-tablet {
+  @include less-then-desktop {
     width: 108px;
     height: 38px;
 
@@ -75,6 +75,11 @@
 
   @include less-then-tablet {
     width: 100px;
+    height: 24px;
+  }
+
+  @include only-tablet {
+    width: 114px;
     height: 24px;
   }
 

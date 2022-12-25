@@ -1,49 +1,191 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container hero__container">
-    <h1 class="hero__page-title">
-      ice cream made with <span class="hero__page-title--accent">passion</span>
-    </h1>
-    <ul class="list hero__button-list">
-      <li class="hero__button-item">
-        <button class="btn btn-products" type="button">Products</button>
-      </li>
-      <li class="hero__button-item">
-        <button class="btn btn-how-its-made" type="button">
-          How it’s made?
-        </button>
-      </li>
-    </ul>
-    <img
-      class="hero__img-plate"
-      src="./images/plate/png/plate-ice-cream-tablet-152.png"
-      alt="plate with ice-cream"
-    />
-    <p class="hero__text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et
-    </p>
+    <div class="hero__wrap">
+      <h1 class="hero__page-title">
+        ice cream made with
+        <span class="hero__page-title--accent">passion</span>
+      </h1>
+      <ul class="list hero__button-list">
+        <li class="hero__button-item">
+          <button class="btn btn-products" type="button">Products</button>
+        </li>
+        <li class="hero__button-item">
+          <button class="btn btn-how-its-made" type="button">
+            How it’s made?
+          </button>
+        </li>
+      </ul>
+      <div class="hero__plate-wrap">
+        <picture class="hero__plate-picture">
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/plate/webp/plate-ice-cream-desktop-@2x-450.webp 450w
+            "
+            sizes="(min-width: 1200px) 225px, 100vw"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/plate/png/plate-ice-cream-desktop-@2x-450.png 450w,
+              ./images/plate/png/plate-ice-cream-desktop-225.png     225w
+            "
+            sizes="(min-width: 1200px) 225px, 100vw"
+            type="image/png"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/plate/webp/plate-ice-cream-tablet-@2x-304.webp 304w
+            "
+            sizes="(min-width: 768px) 152px, 100vw"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/plate/png/plate-ice-cream-tablet-@2x-304.png 304w,
+              ./images/plate/png/plate-ice-cream-tablet-152.png     152w
+            "
+            sizes="(min-width: 768px) 152px, 100vw"
+            type="image/png"
+          />
+          <img
+            class="hero__plate-img"
+            src="./images/plate/png/plate-ice-cream-tablet-152.png"
+            alt="plate with ice-cream"
+          />
+        </picture>
+        <div class="hero__text-wrap">
+          <p class="hero__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <svg class="hero__text-icon" width="40" height="16">
+            <use href="./images/icons/svg-icons.svg#icon-long-arrow"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
     <ul class="list hero__place-list">
-      <li>
-        <p>16</p>
-        <p>cafes</p>
+      <li class="hero__place-item">
+        <p class="hero__place-number">16</p>
+        <p class="hero__place-name">cafes</p>
       </li>
-      <li>
-        <p>23</p>
-        <p>food trucks</p>
+      <li class="hero__place-item">
+        <p class="hero__place-number">23</p>
+        <p class="hero__place-name">food trucks</p>
       </li>
     </ul>
     <div class="hero__img-wrap">
-      <img
-        class="hero__img-ice-cream"
-        src="./images/ice-cream/png/ice-cream-mobile-177.png"
-        alt="ice cream in a waffle cup"
-      />
-      <img
-        class="hero__img-dots"
-        src="./images/dots/png/dots-mobile-320.png"
-        alt="yellow dots"
-      />
+      <!-- Ice-cream -->
+      <picture class="hero__ice-cream-picture">
+        <source
+          media="(min-width: 1200px)"
+          srcset="./images/ice-cream/webp/ice-cream-desktop-@2x-912.webp 912w"
+          sizes="(min-width: 1200px) 456px, 100vw"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/ice-cream/png/ice-cream-desktop-@2x-912.png 912w,
+            ./images/ice-cream/png/ice-cream-desktop-456.png     456w
+          "
+          sizes="(min-width: 1200px) 456px, 100vw"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/ice-cream/webp/ice-cream-tablet-@2x-536.webp 536w"
+          sizes="(min-width: 768px) 268px, 100vw"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/ice-cream/png/ice-cream-tablet-@2x-536.png 536w,
+            ./images/ice-cream/png/ice-cream-tablet-268.png     268w
+          "
+          sizes="(min-width: 768px) 268px, 100vw"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 480px)"
+          srcset="./images/ice-cream/webp/ice-cream-mobile-@2x-354.webp 354w"
+          sizes="(min-width: 480px) 177px, 100vw"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 480px)"
+          srcset="
+            ./images/ice-cream/png/ice-cream-mobile-@2x-354.png 354w,
+            ./images/ice-cream/png/ice-cream-mobile-177.png     177w
+          "
+          sizes="(min-width: 480px) 177px, 100vw"
+          type="image/png"
+        />
+        <img
+          class="hero__img-ice-cream"
+          src="./images/ice-cream/png/ice-cream-mobile-177.png"
+          alt="ice cream in a waffle cup"
+        />
+      </picture>
+      <!-- Dots -->
+      <picture class="hero__dots-picture">
+        <source
+          media="(min-width: 1200px)"
+          srcset="./images/dots/webp/dots-desktop-@2x-2400.webp 2400w"
+          sizes="(min-width: 1200px) 1200px, 100vw"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/dots/png/dots-desktop-@2x-2400.png 2400w,
+            ./images/dots/png/dots-desktop-1200.png     1200w
+          "
+          sizes="(min-width: 1200px) 1200px, 100vw"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/dots/webp/dots-tablet-@2x-1536.webp 1536w"
+          sizes="(min-width: 768px) 768px, 100vw"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/dots/png/dots-tablet-@2x-1536.png 1536w,
+            ./images/dots/png/dots-tablet-768.png       768w
+          "
+          sizes="(min-width: 768px) 768px, 100vw"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 480px)"
+          srcset="./images/dots/webp/dots-mobile-@2x-640.webp 640w"
+          sizes="(min-width: 480px) 320px, 100vw"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 480px)"
+          srcset="
+            ./images/dots/png/dots-mobile-@2x-640.png 640w,
+            ./images/dots/png/dots-mobile-320.png     320w
+          "
+          sizes="(min-width: 480px) 320px, 100vw"
+          type="image/png"
+        />
+        <img
+          class="hero__img-dots"
+          src="./images/dots/png/dots-mobile-320.png"
+          alt="yellow dots"
+        />
+      </picture>
     </div>
   </div>
 </section>
