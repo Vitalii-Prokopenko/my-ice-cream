@@ -11,6 +11,8 @@
     height: 560px;
   }
 
+  // Header-container
+
   &__container {
     padding-top: 38px;
 
@@ -18,20 +20,24 @@
     flex-direction: column;
 
     height: 100%;
-    // outline: 1px solid blue;
 
     @include tablet-and-desktop {
-      padding-top: 0;
+      position: relative;
+
       flex-direction: row;
       justify-content: space-between;
     }
 
-    @include tablet-and-desktop {
-      padding-top: 14px;
+    @include only-tablet {
+      padding-top: 0;
+    }
 
-      position: relative;
+    @include only-desktop {
+      padding-top: 14px;
     }
   }
+
+  // Wrap for left-side elements
 
   &__wrap {
     max-height: 100%;
@@ -40,6 +46,8 @@
     flex-direction: column;
     justify-content: flex-start;
   }
+
+  // Page title h1
 
   &__page-title {
     margin-bottom: 32px;
@@ -78,6 +86,8 @@
     }
   }
 
+  // Buttons
+
   &__button-list {
     margin-bottom: 19px;
     display: flex;
@@ -96,22 +106,24 @@
     margin-right: 12px;
   }
 
+  // Wrap for plate with ice-creams and text
+
   &__plate-wrap {
     display: flex;
     align-items: center;
-
-    @include only-desktop {
-      // align-items: stretch;
-    }
   }
+
+  // Elements hidden for mobile screens
 
   &__plate-picture,
   &__text-wrap,
-  &__place-list {
+  &__outlet-list {
     @include less-then-tablet {
       display: none;
     }
   }
+
+  // Plate with ice-creams
 
   &__plate-picture {
     margin-right: 32px;
@@ -157,7 +169,9 @@
     }
   }
 
-  &__place-list {
+  // Outlets
+
+  &__outlet-list {
     margin-top: 14px;
 
     @include only-desktop {
@@ -165,11 +179,11 @@
     }
   }
 
-  &__place-item {
+  &__outlet-item {
     text-align: right;
   }
 
-  &__place-item:not(:last-child) {
+  &__outlet-item:not(:last-child) {
     margin-bottom: 20px;
 
     @include only-desktop {
@@ -177,7 +191,7 @@
     }
   }
 
-  &__place-number {
+  &__outlet-number {
     margin-bottom: 4px;
 
     font-weight: 900;
@@ -194,7 +208,7 @@
     }
   }
 
-  &__place-name {
+  &__outlet-name {
     font-weight: 400;
     font-size: 8px;
     line-height: calc(10 / 8);
@@ -207,12 +221,13 @@
     }
   }
 
+  // Wrap for absolutely positioned images
+
   &__img-wrap {
     margin: 0 auto;
     position: relative;
     width: 320px;
     height: 217px;
-    // outline: 1px solid blueviolet;
 
     @include only-tablet {
       position: absolute;
