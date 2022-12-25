@@ -71,6 +71,11 @@
     &:focus {
       color: $mainAccentColor;
     }
+
+    @include only-desktop {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   }
 
   &__button-wrap {
