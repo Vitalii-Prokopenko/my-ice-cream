@@ -52,3 +52,38 @@
   background-color: transparent;
   border: none;
 }
+
+// Buttons with svg icons without text
+
+%btn-icons {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+// Visually observed headings of sections
+
+%heading {
+  font-family: $secondaryFont;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: calc(38 / 30);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include only-tablet {
+    font-size: 34px;
+    line-height: calc(43 / 34);
+  }
+
+  @include only-tablet {
+    font-size: 36px;
+    line-height: calc(45 / 36);
+  }
+
+  @include tablet-and-desktop {
+    letter-spacing: 0.06em;
+  }
+}

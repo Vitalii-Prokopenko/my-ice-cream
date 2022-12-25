@@ -91,11 +91,7 @@
 }
 
 .mobile-menu-open {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
+  @extend %btn-icons;
 
   @include only-tablet {
     margin-right: 32px;

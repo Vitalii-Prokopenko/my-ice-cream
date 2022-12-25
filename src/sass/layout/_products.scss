@@ -1,0 +1,117 @@
+/* === PRODUCTS ===*/
+
+.products {
+  text-align: center;
+
+  background-color: #fff;
+
+  &__container {
+    padding: 60px 0;
+  }
+
+  &__title {
+    margin-bottom: 145px;
+
+    @extend %heading;
+
+    color: $secondaryColor;
+  }
+
+  &__subtitle {
+    margin-bottom: 12px;
+
+    font-weight: 800;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    text-transform: uppercase;
+
+    color: $secondaryColor;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+
+    padding: 123px 40px 16px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 280px;
+    height: 420px;
+
+    background-color: tomato;
+    border-radius: 24px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 168px;
+  }
+
+  &__circle {
+    position: absolute;
+    top: -100px;
+    left: calc((280px - 200px) / 2);
+    z-index: 2;
+
+    width: 200px;
+    height: 200px;
+
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -11px;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-image: url(../images/products/png/product-mobile1-132.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__name {
+    margin-bottom: 40px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $secondaryColor;
+  }
+
+  &__description {
+    margin-bottom: auto;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(25 / 14);
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: $secondaryColor;
+  }
+
+  &__arrow {
+    @extend %btn-icons;
+
+    &-icon {
+      color: $secondaryColor;
+    }
+  }
+}
