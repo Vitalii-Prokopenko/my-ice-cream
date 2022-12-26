@@ -87,3 +87,19 @@
     letter-spacing: 0.06em;
   }
 }
+
+// Product card positioned image
+
+%product-img {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 0;
+
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}

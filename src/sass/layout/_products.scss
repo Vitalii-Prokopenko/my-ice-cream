@@ -3,7 +3,14 @@
 .products {
   text-align: center;
 
-  background-color: #fff;
+  background-image: url(../images/background/jpg/backgroud-mobile-885.jpg);
+  @include pixel-ratio-2x {
+    background-image: url(../images/background/jpg/backgroud-mobile-@2x-1770.jpg);
+  }
+
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
 
   &__container {
     padding: 60px 0;
@@ -47,8 +54,24 @@
     width: 280px;
     height: 420px;
 
-    background-color: tomato;
     border-radius: 24px;
+    transition: $myBoxShadowTransition;
+
+    &--green {
+      background-color: #aec6a5;
+    }
+
+    &--yellow {
+      background-color: #efd478;
+    }
+
+    &--brown {
+      background-color: #d6936d;
+    }
+
+    &:hover {
+      box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.15);
+    }
   }
 
   &__item:not(:last-child) {
@@ -64,21 +87,45 @@
     width: 200px;
     height: 200px;
 
-    background-color: yellow;
     border-radius: 50%;
-    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: -11px;
-      left: 0;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background-image: url(../images/products/png/product-mobile1-132.png);
-      background-repeat: no-repeat;
-      background-size: cover;
+    &--green {
+      background-color: #aec6a5;
+      box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+
+      &::before {
+        @extend %product-img;
+        background-image: url(../images/products/png/product-tablet-mobile1-200.png);
+        @include pixel-ratio-2x {
+          background-image: url(../images/products/png/product-tablet-mobile1-@2x-400.png);
+        }
+      }
+    }
+
+    &--yellow {
+      background-color: #efd478;
+      box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+
+      &::before {
+        @extend %product-img;
+        background-image: url(../images/products/png/product-tablet-mobile2-200.png);
+        @include pixel-ratio-2x {
+          background-image: url(../images/products/png/product-tablet-mobile2-@2x-400.png);
+        }
+      }
+    }
+
+    &--brown {
+      background-color: #d6936d;
+      box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+
+      &::before {
+        @extend %product-img;
+        background-image: url(../images/products/png/product-tablet-mobile3-200.png);
+        @include pixel-ratio-2x {
+          background-image: url(../images/products/png/product-tablet-mobile3-@2x-400.png);
+        }
+      }
     }
   }
 
@@ -111,7 +158,12 @@
     @extend %btn-icons;
 
     &-icon {
-      color: $secondaryColor;
+      fill: $secondaryColor;
+      transition: $myFillTransition;
+    }
+
+    &:hover &-icon {
+      fill: $mainColor;
     }
   }
 }
