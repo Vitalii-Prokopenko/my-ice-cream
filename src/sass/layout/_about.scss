@@ -2,4 +2,85 @@
 
 .about {
   background: $mainBgColor;
+
+  &__container {
+    padding: 61px 0 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+
+    @extend %heading;
+
+    width: 200px;
+
+    color: $mainColor;
+  }
+
+  &__subtitle {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    text-transform: uppercase;
+
+    color: $mainColor;
+  }
+
+  &__circle {
+    margin-bottom: 62px;
+
+    position: relative;
+
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+
+    background-color: $mainAccentColor;
+  }
+
+  &__thumb {
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+  }
+
+  &__text-wrap {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    width: 220px;
+
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+
+    color: $mainColor;
+
+    &:nth-child(1) {
+      margin-bottom: 4px;
+
+      line-height: calc(21 / 12);
+    }
+
+    &:nth-child(2) {
+      line-height: calc(19 / 12);
+    }
+
+    &:nth-child(3) {
+      display: none;
+    }
+  }
 }
