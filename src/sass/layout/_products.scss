@@ -3,18 +3,17 @@
 .products {
   text-align: center;
 
-  background-image: url(../images/background/jpg/backgroud-mobile-885.jpg);
-  @include pixel-ratio-2x {
-    background-image: url(../images/background/jpg/backgroud-mobile-@2x-1770.jpg);
-  }
-
-  background-repeat: repeat;
-  background-size: cover;
-  background-position: center;
+  // Products container
 
   &__container {
     padding: 60px 0;
+
+    @include only-desktop {
+      padding: 86px 0 34px;
+    }
   }
+
+  // Section title
 
   &__title {
     margin-bottom: 145px;
@@ -22,7 +21,19 @@
     @extend %heading;
 
     color: $secondaryColor;
+
+    @include only-tablet {
+      margin-bottom: 200px;
+
+      letter-spacing: 0.04em;
+    }
+
+    @include only-desktop {
+      margin-bottom: 303px;
+    }
   }
+
+  // Subtitle
 
   &__subtitle {
     margin-bottom: 12px;
@@ -33,29 +44,60 @@
     text-transform: uppercase;
 
     color: $secondaryColor;
+
+    @include only-tablet {
+      font-size: 22px;
+      line-height: calc(27 / 22);
+    }
+
+    @include only-desktop {
+      font-size: 30px;
+      line-height: calc(37 / 30);
+    }
   }
+
+  // Product cards
 
   &__list {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet-and-desktop {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 
   &__item {
     position: relative;
 
-    padding: 123px 40px 16px 40px;
+    padding: 123px 40px 16px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
-    width: 280px;
+    width: $cardWidthMobile;
     height: 420px;
 
     border-radius: 24px;
     transition: $myBoxShadowTransition;
+
+    @include only-tablet {
+      padding: 108px 26px 12px;
+
+      width: $cardWidthTablet;
+      height: 428px;
+    }
+
+    @include only-desktop {
+      padding: 165px 64px 60px;
+
+      width: $cardWidthDesktop;
+      height: 536px;
+    }
 
     &--green {
       background-color: #aec6a5;
@@ -75,19 +117,44 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 168px;
+    @include less-then-tablet {
+      margin-bottom: 168px;
+    }
+
+    @include only-tablet {
+      margin-right: 16px;
+    }
+
+    @include only-desktop {
+      margin-right: 29px;
+    }
   }
+
+  // Circle thumbs for images
 
   &__circle {
     position: absolute;
     top: -100px;
-    left: calc((280px - 200px) / 2);
+    left: calc(($cardWidthMobile - $thumbDiameterMobileTablet) / 2);
     z-index: 2;
 
-    width: 200px;
-    height: 200px;
+    width: $thumbDiameterMobileTablet;
+    height: $thumbDiameterMobileTablet;
 
     border-radius: 50%;
+
+    @include only-tablet {
+      top: -108px;
+      left: calc(($cardWidthTablet - $thumbDiameterMobileTablet) / 2);
+    }
+
+    @include only-desktop {
+      top: -167px;
+      left: calc(($cardWidthDesktop - $thumbDiameterDesktop) / 2);
+
+      width: $thumbDiameterDesktop;
+      height: $thumbDiameterDesktop;
+    }
 
     &--green {
       background-color: #aec6a5;
@@ -98,6 +165,13 @@
         background-image: url(../images/products/png/product-tablet-mobile1-200.png);
         @include pixel-ratio-2x {
           background-image: url(../images/products/png/product-tablet-mobile1-@2x-400.png);
+        }
+
+        @include only-desktop {
+          background-image: url(../images/products/png/product-desktop1-302.png);
+          @include pixel-ratio-2x {
+            background-image: url(../images/products/png/product-desktop1-@2x-604.png);
+          }
         }
       }
     }
@@ -112,6 +186,13 @@
         @include pixel-ratio-2x {
           background-image: url(../images/products/png/product-tablet-mobile2-@2x-400.png);
         }
+
+        @include only-desktop {
+          background-image: url(../images/products/png/product-desktop2-302.png);
+          @include pixel-ratio-2x {
+            background-image: url(../images/products/png/product-desktop2-@2x-604.png);
+          }
+        }
       }
     }
 
@@ -125,9 +206,18 @@
         @include pixel-ratio-2x {
           background-image: url(../images/products/png/product-tablet-mobile3-@2x-400.png);
         }
+
+        @include only-desktop {
+          background-image: url(../images/products/png/product-desktop3-302.png);
+          @include pixel-ratio-2x {
+            background-image: url(../images/products/png/product-desktop3-@2x-604.png);
+          }
+        }
       }
     }
   }
+
+  // Product name
 
   &__name {
     margin-bottom: 40px;
@@ -140,7 +230,21 @@
     text-transform: uppercase;
 
     color: $secondaryColor;
+
+    @include only-tablet {
+      font-size: 22px;
+      line-height: calc(27 / 22);
+    }
+
+    @include only-desktop {
+      margin-bottom: 66px;
+
+      font-size: 30px;
+      line-height: calc(37 / 30);
+    }
   }
+
+  // Product description
 
   &__description {
     margin-bottom: auto;
@@ -152,7 +256,14 @@
     letter-spacing: 0.04em;
 
     color: $secondaryColor;
+
+    @include only-desktop {
+      font-size: 16px;
+      line-height: calc(28 / 16);
+    }
   }
+
+  // Icon arrow
 
   &__arrow {
     @extend %btn-icons;

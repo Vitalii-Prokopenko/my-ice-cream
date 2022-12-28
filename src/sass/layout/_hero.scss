@@ -3,6 +3,8 @@
 .hero {
   height: 441px;
 
+  background-color: $mainBgColor;
+
   @include only-tablet {
     height: 337px;
   }
@@ -126,6 +128,8 @@
   // Plate with ice-creams
 
   &__plate-picture {
+    z-index: 3;
+
     margin-right: 32px;
 
     @include only-desktop {
@@ -250,6 +254,7 @@
     position: absolute;
     bottom: 0;
     left: 26%;
+    z-index: 3;
 
     width: 177px;
     height: 100%;
@@ -269,7 +274,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: 2;
 
     width: 100%;
   }

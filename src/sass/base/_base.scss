@@ -4,6 +4,29 @@ body {
   font-family: $mainFont;
   color: $mainColor;
   background-color: $mainBgColor;
+
+  background-image: url(../images/background/jpg/background-mobile-885.jpg);
+  @include pixel-ratio-2x {
+    background-image: url(../images/background/jpg/background-mobile-@2x-1770.jpg);
+  }
+
+  background-repeat: repeat;
+  object-fit: cover;
+  object-position: center;
+
+  @include only-tablet {
+    background-image: url(../images/background/jpg/background-tablet-963.jpg);
+    @include pixel-ratio-2x {
+      background-image: url(../images/background/jpg/background-tablet-@2x-1926.jpg);
+    }
+  }
+
+  @include only-desktop {
+    background-image: url(../images/background/jpg/background-desktop-1300.jpg);
+    @include pixel-ratio-2x {
+      background-image: url(../images/background/jpg/background-desktop-@2x-2600.jpg);
+    }
+  }
 }
 
 section:not(.hero),

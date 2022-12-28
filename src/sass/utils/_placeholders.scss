@@ -96,10 +96,21 @@
   top: -11px;
   left: 0;
 
-  width: 200px;
-  height: 200px;
+  width: $thumbDiameterMobileTablet;
+  height: $thumbDiameterMobileTablet;
   border-radius: 50%;
 
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include only-tablet {
+    top: -12px;
+  }
+
+  @include only-desktop {
+    top: -16px;
+
+    width: $thumbDiameterDesktop;
+    height: $thumbDiameterDesktop;
+  }
 }
