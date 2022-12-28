@@ -15,6 +15,20 @@
 
     border-radius: 8px;
   }
+
+  &:hover,
+  &:focus {
+    border: 2px solid $secondaryAccentColor;
+  }
+
+  &--hero {
+    padding: 12px 34px;
+    text-decoration: none;
+
+    @include less-then-desktop {
+      padding: 11px 26px;
+    }
+  }
 }
 
 .btn-read-more,

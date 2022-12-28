@@ -16,6 +16,7 @@
 
 .btn-franchise, .btn-products {
   background-color: transparent;
+  color: #131313;
   border: 2px solid #f8d24e;
 }
 .btn-franchise:hover, .btn-products:hover, .btn-franchise:focus, .btn-products:focus {
@@ -219,6 +220,18 @@ footer {
     font-size: 12px;
     line-height: 1.25;
     border-radius: 8px;
+  }
+}
+.btn-products:hover, .btn-products:focus {
+  border: 2px solid #0a8817;
+}
+.btn-products--hero {
+  padding: 12px 34px;
+  text-decoration: none;
+}
+@media screen and (max-width: 1199px) {
+  .btn-products--hero {
+    padding: 11px 26px;
   }
 }
 
