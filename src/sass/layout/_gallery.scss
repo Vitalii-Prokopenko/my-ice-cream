@@ -1,0 +1,56 @@
+/* === GALLERY === */
+
+.gallery {
+  &__list {
+    position: relative;
+
+    margin: 0 auto;
+
+    width: 280px;
+    height: 117px;
+  }
+
+  @keyframes gallery-fade {
+    0% {
+      opacity: 1;
+    }
+    28% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+    94% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    position: absolute;
+    left: 0;
+
+    height: 117px;
+    // transition: opacity 1s ease-in-out;
+
+    animation-name: gallery-fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+
+    &:nth-of-type(1) {
+      animation-delay: 6s;
+    }
+
+    &:nth-of-type(2) {
+      animation-delay: 3s;
+    }
+
+    &:nth-of-type(3) {
+      animation-delay: 0s;
+    }
+  }
+}

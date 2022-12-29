@@ -1,24 +1,171 @@
 <!-- GALLERY -->
 <section class="gallery">
   <div class="container">
-    <ul class="list">
-      <li>
-        <img
-          src="./images/gallery/jpg/gallery-mobile1-280.jpg"
-          alt="ice-cream"
-        />
+    <ul class="list gallery__list">
+      <!-- Image 1 -->
+      <li class="gallery__item">
+        <picture class="gallery__picture">
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/gallery/jpg/gallery-desktop1-@2x-2026.jpg 2026w,
+              ./images/gallery/jpg/gallery-desktop1-1013.jpg     1013w
+            "
+            sizes="(min-width: 1200px) 1013px, 100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="./images/gallery/webp/gallery-desktop1-@2x-2026.webp 2026w"
+            sizes="(min-width: 1200px) 1013px, 100vw"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/gallery/jpg/gallery-tablet1-@2x-1408.jpg 1408w,
+              ./images/gallery/jpg/gallery-tablet1-704.jpg       704w
+            "
+            sizes="(min-width: 768px) 704px, 100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/gallery/webp/gallery-tablet1-@2x-1408.webp 1408w"
+            sizes="(min-width: 768px) 704px, 100vw"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 480px)"
+            srcset="
+              ./images/gallery/jpg/gallery-mobile1-@2x-560.jpg 560w,
+              ./images/gallery/jpg/gallery-mobile1-280.jpg     280w
+            "
+            sizes="(min-width: 480px) 280px, 100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 480px)"
+            srcset="./images/gallery/webp/gallery-mobile1-@2x-560.webp 560w"
+            sizes="(min-width: 480px) 280px, 100vw"
+            type="image/webp"
+          />
+          <img
+            class="gallery__img"
+            src="./images/gallery/jpg/gallery-mobile1-280.jpg"
+            alt="ice cream"
+          />
+        </picture>
       </li>
-      <li>
-        <img
-          src="./images/gallery/jpg/gallery-mobile2-280.jpg"
-          alt="ice-cream"
-        />
+      <!-- Image 2 -->
+      <li class="gallery__item">
+        <picture class="gallery__picture">
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/gallery/jpg/gallery-desktop2-@2x-2026.jpg 2026w,
+              ./images/gallery/jpg/gallery-desktop2-1013.jpg     1013w
+            "
+            sizes="(min-width: 1200px) 1013px, 100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="./images/gallery/webp/gallery-desktop2-@2x-2026.webp 2026w"
+            sizes="(min-width: 1200px) 1013px, 100vw"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/gallery/jpg/gallery-tablet2-@2x-1408.jpg 1408w,
+              ./images/gallery/jpg/gallery-tablet2-704.jpg       704w
+            "
+            sizes="(min-width: 768px) 704px, 100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/gallery/webp/gallery-tablet2-@2x-1408.webp 1408w"
+            sizes="(min-width: 768px) 704px, 100vw"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 480px)"
+            srcset="
+              ./images/gallery/jpg/gallery-mobile1-@2x-560.jpg 560w,
+              ./images/gallery/jpg/gallery-mobile2-280.jpg     280w
+            "
+            sizes="(min-width: 480px) 280px, 100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 480px)"
+            srcset="./images/gallery/webp/gallery-mobile2-@2x-560.webp 560w"
+            sizes="(min-width: 480px) 280px, 100vw"
+            type="image/webp"
+          />
+          <img
+            class="gallery__img"
+            src="./images/gallery/jpg/gallery-mobile2-280.jpg"
+            alt="ice cream"
+          />
+        </picture>
       </li>
-      <li>
-        <img
-          src="./images/gallery/jpg/gallery-mobile3-280.jpg"
-          alt="ice-cream"
-        />
+      <!-- Image 3 -->
+      <li class="gallery__item">
+        <picture class="gallery__picture">
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/gallery/jpg/gallery-desktop3-@2x-2026.jpg 2026w,
+              ./images/gallery/jpg/gallery-desktop3-1013.jpg     1013w
+            "
+            sizes="(min-width: 1200px) 1013px, 100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="./images/gallery/webp/gallery-desktop3-@2x-2026.webp 2026w"
+            sizes="(min-width: 1200px) 1013px, 100vw"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/gallery/jpg/gallery-tablet3-@2x-1408.jpg 1408w,
+              ./images/gallery/jpg/gallery-tablet3-704.jpg       704w
+            "
+            sizes="(min-width: 768px) 704px, 100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/gallery/webp/gallery-tablet3-@2x-1408.webp 1408w"
+            sizes="(min-width: 768px) 704px, 100vw"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 480px)"
+            srcset="
+              ./images/gallery/jpg/gallery-mobile3-@2x-560.jpg 560w,
+              ./images/gallery/jpg/gallery-mobile3-280.jpg     280w
+            "
+            sizes="(min-width: 480px) 280px, 100vw"
+            type="image/png"
+          />
+          <source
+            media="(min-width: 480px)"
+            srcset="./images/gallery/webp/gallery-mobile3-@2x-560.webp 560w"
+            sizes="(min-width: 480px) 280px, 100vw"
+            type="image/webp"
+          />
+          <img
+            class="gallery__img"
+            src="./images/gallery/jpg/gallery-mobile3-280.jpg"
+            alt="ice cream"
+          />
+        </picture>
       </li>
     </ul>
   </div>
