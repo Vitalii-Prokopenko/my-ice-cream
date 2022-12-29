@@ -3,36 +3,87 @@
   <div class="container about__container">
     <p class="about__subtitle">tradition and love</p>
     <h2 class="about__title">how it’s made?</h2>
-    <div class="about__circle">
-      <div class="about__thumb">
-        <img
-          class="about_cow"
-          src="./images/cow/png/cow-mobile-279.png"
-          alt="cow"
-        />
+    <div class="about__content-wrap">
+      <div class="about__circle">
+        <div class="about__thumb">
+          <picture class="about__cow-picture">
+            <source
+              media="(min-width: 1200px)"
+              srcset="
+                ./images/cow/png/cow-desktop-@2x-980.png 980w,
+                ./images/cow/png/cow-desktop-490.png     490w
+              "
+              sizes="(min-width: 1200px) 490px, 100vw"
+              type="image/png"
+            />
+            <source
+              media="(min-width: 1200px)"
+              srcset="./images/cow/webp/cow-desktop-@2x-980.webp 980w"
+              sizes="(min-width: 1200px) 490px, 100vw"
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./images/cow/png/cow-tablet-@2x-660.png 660w,
+                ./images/cow/png/cow-tablet-330.png     330w
+              "
+              sizes="(min-width: 768px) 330px, 100vw"
+              type="image/png"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/cow/webp/cow-tablet-@2x-660.webp 660w"
+              sizes="(min-width: 768px) 330px, 100vw"
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 480px)"
+              srcset="
+                ./images/cow/png/cow-mobile-@2x-558.png 558w,
+                ./images/cow/png/cow-mobile-279.png     279w
+              "
+              sizes="(min-width: 480px) 279px, 100vw"
+              type="image/png"
+            />
+            <source
+              media="(min-width: 480px)"
+              srcset="./images/cow/webp/cow-mobile-@2x-558.webp 558w"
+              sizes="(min-width: 480px) 279px, 100vw"
+              type="image/webp"
+            />
+            <img
+              class="hero__img-cow"
+              src="./images/cow/png/cow-mobile-279.png"
+              alt="cow"
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="about__text-button-wrap">
+        <div class="about__text-wrap">
+          <p class="about__text">
+            Ice is a place where you will become not only a little happier, but
+            also healthier. Health is the main value for us, and we follow it
+            when creating our handmade desserts.
+          </p>
+          <p class="about__text">
+            We use traditional recipes and 100% natural ingredients. Our
+            products are so natural that they can be given to children from the
+            age of three years. Sweets lovers can expect 55 types of ice cream,
+            15 types of coffee and 23 milkshakes.
+          </p>
+          <p class="about__text">
+            This is enough to choose ice cream and coffee for any mood!
+          </p>
+        </div>
+        <button class="btn btn-read-more" type="button">
+          Read more
+          <svg class="btn-read-more__icon" width="12" height="12">
+            <use href="./images/icons/svg-icons.svg#icon-right-arrow"></use>
+          </svg>
+        </button>
       </div>
     </div>
-    <div class="about__text-wrap">
-      <p class="about__text">
-        Ice is a place where you will become not only a little happier, but also
-        healthier. Health is the main value for us, and we follow it when
-        creating our handmade desserts.
-      </p>
-      <p class="about__text">
-        We use traditional recipes and 100% natural ingredients. Our products
-        are so natural that they can be given to children from the age of three
-        years. Sweets lovers can expect 55 types of ice cream, 15 types of
-        coffee and 23 milkshakes.
-      </p>
-      <p class="about__text">
-        This is enough to choose ice cream and coffee for any mood!
-      </p>
-    </div>
-    <button class="btn btn-read-more" type="button">
-      Read more
-      <svg class="btn-read-more__icon" width="12" height="12">
-        <use href="./images/icons/svg-icons.svg#icon-right-arrow"></use>
-      </svg>
-    </button>
   </div>
 </section>

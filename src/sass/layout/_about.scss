@@ -3,25 +3,51 @@
 .about {
   background: $mainBgColor;
 
+  // Section container
+
   &__container {
-    padding: 61px 0 50px;
+    padding-top: 61px;
+    padding-bottom: 50px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
     text-align: center;
+
+    @include tablet-and-desktop {
+      padding-top: 60px;
+      padding-bottom: 80px;
+    }
+
+    @include only-desktop {
+      padding-bottom: 99px;
+    }
   }
+
+  // Section title
 
   &__title {
     margin-bottom: 32px;
 
-    @extend %heading;
-
     width: 200px;
 
+    @extend %heading;
+
     color: $mainColor;
+
+    @include tablet-and-desktop {
+      margin-bottom: 72px;
+
+      width: 100%;
+    }
+
+    @include only-desktop {
+      margin-bottom: 82px;
+    }
   }
+
+  // Section subtitle
 
   &__subtitle {
     margin-bottom: 12px;
@@ -32,18 +58,78 @@
     text-transform: uppercase;
 
     color: $mainColor;
+
+    @include tablet-and-desktop {
+      font-weight: 800;
+      font-size: 22px;
+      line-height: calc(27 / 22);
+      letter-spacing: 0.04em;
+    }
+
+    @include only-desktop {
+      font-size: 30px;
+      line-height: calc(37 / 30);
+    }
   }
 
-  &__circle {
-    margin-bottom: 62px;
+  // Wrapper for section content
 
-    position: relative;
+  &__content-wrap {
+    display: flex;
 
+    width: 100%;
+
+    @include less-then-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include tablet-and-desktop {
+      flex-direction: row;
+    }
+
+    @include only-tablet {
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    @include only-desktop {
+      align-items: center;
+    }
+  }
+
+  // Cow image
+  // Thumb is additional wrapper if rectangular image be used
+
+  &__circle,
+  &__thumb {
     width: 280px;
     height: 280px;
     border-radius: 50%;
 
+    @include only-tablet {
+      width: 330px;
+      height: 330px;
+    }
+
+    @include only-desktop {
+      width: 490px;
+      height: 490px;
+    }
+  }
+
+  &__circle {
+    position: relative;
+
     background-color: $mainAccentColor;
+
+    @include less-then-tablet {
+      margin-bottom: 62px;
+    }
+
+    @include only-desktop {
+      margin-right: 109px;
+    }
   }
 
   &__thumb {
@@ -51,13 +137,35 @@
     top: 20px;
     left: 0;
 
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
+    @include only-tablet {
+      top: 26px;
+    }
+
+    @include only-desktop {
+      top: 29px;
+    }
+  }
+
+  &__text-button-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet-and-desktop {
+      align-items: flex-start;
+    }
   }
 
   &__text-wrap {
     margin-bottom: 10px;
+
+    @include only-tablet {
+      margin-bottom: 32px;
+    }
+
+    @include only-desktop {
+      margin-bottom: 54px;
+    }
   }
 
   &__text {
@@ -69,18 +177,59 @@
 
     color: $mainColor;
 
-    &:nth-child(1) {
-      margin-bottom: 4px;
+    @include tablet-and-desktop {
+      width: 336px;
 
+      text-align: left;
+    }
+
+    @include only-desktop {
+      width: 463px;
+    }
+
+    &:first-child {
       line-height: calc(21 / 12);
+
+      @include less-then-tablet {
+        margin-bottom: 4px;
+      }
+
+      @include only-desktop {
+        font-size: 16px;
+        line-height: calc(28 / 16);
+      }
+    }
+
+    &:not(:last-child) {
+      @include tablet-and-desktop {
+        margin-bottom: 8px;
+      }
+    }
+
+    &:last-child {
+      @include less-then-tablet {
+        display: none;
+      }
+
+      @include only-tablet {
+        line-height: calc(23 / 12);
+      }
     }
 
     &:nth-child(2) {
-      line-height: calc(19 / 12);
+      @include less-then-tablet {
+        line-height: calc(19 / 12);
+      }
+      @include only-tablet {
+        line-height: calc(21 / 12);
+      }
     }
 
-    &:nth-child(3) {
-      display: none;
+    &:nth-child(n + 2) {
+      @include only-desktop {
+        font-size: 14px;
+        line-height: calc(27 / 14);
+      }
     }
   }
 }

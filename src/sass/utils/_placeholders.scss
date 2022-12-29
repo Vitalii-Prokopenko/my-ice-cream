@@ -89,7 +89,7 @@
     line-height: calc(43 / 34);
   }
 
-  @include only-tablet {
+  @include only-desktop {
     font-size: 36px;
     line-height: calc(45 / 36);
   }
