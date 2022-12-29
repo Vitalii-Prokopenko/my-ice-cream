@@ -1,22 +1,22 @@
 .container {
-  padding: 0 20px;
+  padding: 0 $containerPadMobile;
   margin-right: auto;
   margin-left: auto;
 
   // mobile screen
   @media screen and (min-width: 480px) {
-    width: 480px;
+    width: $minMobile;
   }
 
   // tablet screen
   @media screen and (min-width: 768px) {
-    padding: 0 32px;
-    width: 768px;
+    padding: 0 $containerPadTablet;
+    width: $minTablet;
   }
 
   // desktop screen
   @media screen and (min-width: 1200px) {
-    padding: 0 16px;
-    width: 1200px;
+    padding: 0 $containerPadDesktop;
+    width: $minDesktop;
   }
 }
