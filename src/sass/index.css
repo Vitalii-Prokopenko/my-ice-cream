@@ -108,6 +108,18 @@
   }
 }
 
+.advantages__icon-bg--ice-crema::before, .advantages__icon-bg--weight::before, .advantages__icon-bg--cow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* == GLOBAL STYLES RESET == */
 /* headings and paragraphs */
 p,
@@ -187,7 +199,7 @@ body {
   }
 }
 
-section:not(.hero),
+section:not(.hero, .products, .about, .advantages),
 footer {
   outline: 1px solid tomato;
 }
@@ -302,6 +314,21 @@ footer {
 }
 .btn-how-its-made:focus {
   color: #fcfcfc;
+}
+
+/* Visually hidden elements */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
 }
 
 /* === HEADER === */
@@ -1127,6 +1154,128 @@ footer {
   .about__text:nth-child(n+2) {
     font-size: 14px;
     line-height: 1.9285714286;
+  }
+}
+
+/* === ADVANTAGES === */
+.advantages {
+  background: #84a178;
+}
+.advantages__container {
+  display: flex;
+  justify-content: center;
+}
+.advantages__list {
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-auto-rows: minmax(166px, auto);
+  width: 230px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .advantages__list {
+    row-gap: 28px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advantages__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages__list {
+    width: 616px;
+    -moz-column-gap: 80px;
+         column-gap: 80px;
+    grid-auto-rows: minmax(241px, auto);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__list {
+    width: 1168;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    grid-auto-rows: minmax(225px, auto);
+  }
+}
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.advantages__icon-bg {
+  position: relative;
+  margin-bottom: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f8d24e;
+}
+.advantages__icon-bg--cow::before {
+  background-image: url(../images/advantages/cow-36.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .advantages__icon-bg--cow::before {
+    background-image: url(../images/advantages/cow-@2x-72.png);
+  }
+}
+.advantages__icon-bg--weight::before {
+  background-image: url(../images/advantages/weight-36.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .advantages__icon-bg--weight::before {
+    background-image: url(../images/advantages/weight-@2x-72.png);
+  }
+}
+.advantages__icon-bg--ice-crema::before {
+  background-image: url(../images/advantages/ice-crema-36.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .advantages__icon-bg--ice-crema::before {
+    background-image: url(../images/advantages/ice-crema-@2x-72.png);
+  }
+}
+.advantages__value {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+}
+@media screen and (min-width: 768px) {
+  .advantages__value {
+    font-size: 48px;
+    line-height: 1.2291666667;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__value {
+    font-size: 58px;
+    line-height: 1.224137931;
+  }
+}
+.advantages__text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.6666666667;
+  color: #fcfcfc;
+}
+@media screen and (min-width: 768px) {
+  .advantages__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__text {
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
   }
 }
 

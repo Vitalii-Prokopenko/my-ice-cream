@@ -29,7 +29,7 @@ body {
   }
 }
 
-section:not(.hero),
+section:not(.hero, .products, .about, .advantages),
 footer {
   outline: 1px solid tomato;
 }

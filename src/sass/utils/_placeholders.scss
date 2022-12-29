@@ -125,3 +125,19 @@
     height: $thumbDiameterDesktop;
   }
 }
+
+// Advantages icons
+
+%icon-bg {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 36px;
+  height: 36px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
