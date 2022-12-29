@@ -22,11 +22,11 @@
   background-color: transparent;
   color: $secondaryColor;
 
-  @include button-border($mainAccentColor);
+  border: 2px solid $mainAccentColor;
 
   &:hover,
   &:focus {
-    @include button-border($secondaryAccentColor);
+    border-color: $secondaryAccentColor;
   }
 }
 
@@ -36,12 +36,12 @@
   @extend %btn-text;
 
   background-color: $mainAccentColor;
-  @include button-border($mainAccentColor);
+  border: 2px solid $mainAccentColor;
 
   &:hover,
   &:focus {
     background-color: $secondaryAccentColor;
-    @include button-border($secondaryAccentColor);
+    border-color: $secondaryAccentColor;
   }
 }
 
@@ -52,6 +52,16 @@
 
   background-color: transparent;
   border: none;
+}
+
+// Links styled as buttons
+
+%link-btn-styled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
 }
 
 // Buttons with svg icons without text

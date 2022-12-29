@@ -92,6 +92,7 @@
 
   &__button-list {
     margin-bottom: 19px;
+
     display: flex;
     align-items: center;
 
@@ -102,6 +103,20 @@
     @include only-desktop {
       margin-bottom: 42px;
     }
+  }
+
+  &__button-item {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    // width: 108px;
+    // height: 38px;
+
+    // @include only-desktop {
+    //   width: 134px;
+    //   height: 42px;
+    // }
   }
 
   &__button-item:not(:last-child) {

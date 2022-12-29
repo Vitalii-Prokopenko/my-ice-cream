@@ -1,7 +1,7 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 .btn-how-its-made, .btn-read-more,
 .btn-locations,
-.btn-buy-now, .btn-franchise, .btn-products {
+.btn-buy-now, .btn-products, .btn-franchise {
   font-weight: 600;
   font-size: 14px;
   line-height: 1.2857142857;
@@ -10,17 +10,17 @@
 }
 .btn-how-its-made:focus, .btn-read-more:focus,
 .btn-locations:focus,
-.btn-buy-now:focus, .btn-franchise:focus, .btn-products:focus {
+.btn-buy-now:focus, .btn-products:focus, .btn-franchise:focus {
   color: #fcfcfc;
 }
 
-.btn-franchise, .btn-products {
+.btn-products, .btn-franchise {
   background-color: transparent;
   color: #131313;
   border: 2px solid #f8d24e;
 }
-.btn-franchise:hover, .btn-products:hover, .btn-franchise:focus, .btn-products:focus {
-  border: 2px solid #0a8817;
+.btn-products:hover, .btn-franchise:hover, .btn-products:focus, .btn-franchise:focus {
+  border-color: #0a8817;
 }
 
 .btn-read-more,
@@ -35,12 +35,19 @@
 .btn-locations:focus,
 .btn-buy-now:focus {
   background-color: #0a8817;
-  border: 2px solid #0a8817;
+  border-color: #0a8817;
 }
 
 .btn-how-its-made {
   background-color: transparent;
   border: none;
+}
+
+.btn-how-its-made, .btn-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .products__arrow, .mobile-menu-open {
@@ -209,32 +216,6 @@ footer {
 }
 
 /* === BUTTONS === */
-.btn-products {
-  width: 134px;
-  height: 42px;
-}
-@media screen and (max-width: 1199px) {
-  .btn-products {
-    width: 108px;
-    height: 38px;
-    font-size: 12px;
-    line-height: 1.25;
-    border-radius: 8px;
-  }
-}
-.btn-products:hover, .btn-products:focus {
-  border: 2px solid #0a8817;
-}
-.btn-products--hero {
-  padding: 12px 34px;
-  text-decoration: none;
-}
-@media screen and (max-width: 1199px) {
-  .btn-products--hero {
-    padding: 11px 26px;
-  }
-}
-
 .btn-read-more,
 .btn-locations,
 .btn-buy-now,
@@ -282,29 +263,38 @@ footer {
   width: 152px;
 }
 
-.btn-how-its-made {
-  width: 154px;
-  height: 40px;
-  line-height: 1.2142857143;
-  text-decoration: underline;
-  color: #f8d24e;
+.btn-products {
+  width: 108px;
+  height: 38px;
 }
-@media screen and (max-width: 1199px) {
-  .btn-how-its-made {
+@media screen and (min-width: 1200px) {
+  .btn-products {
+    width: 134px;
+    height: 42px;
     font-size: 12px;
     line-height: 1.25;
+    border-radius: 8px;
   }
 }
-@media screen and (max-width: 767px) {
-  .btn-how-its-made {
-    width: 100px;
-    height: 24px;
-  }
+
+.btn-how-its-made {
+  width: 100px;
+  height: 24px;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #f8d24e;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .btn-how-its-made {
     width: 114px;
-    height: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn-how-its-made {
+    width: 154px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.2142857143;
   }
 }
 .btn-how-its-made:hover {

@@ -1,36 +1,5 @@
 /* === BUTTONS === */
 
-.btn-products {
-  @extend %btn-transparent-bg;
-
-  width: 134px;
-  height: 42px;
-
-  @include less-then-desktop {
-    width: 108px;
-    height: 38px;
-
-    font-size: 12px;
-    line-height: calc(15 / 12);
-
-    border-radius: 8px;
-  }
-
-  &:hover,
-  &:focus {
-    border: 2px solid $secondaryAccentColor;
-  }
-
-  &--hero {
-    padding: 12px 34px;
-    text-decoration: none;
-
-    @include less-then-desktop {
-      padding: 11px 26px;
-    }
-  }
-}
-
 .btn-read-more,
 .btn-locations,
 .btn-buy-now,
@@ -71,30 +40,49 @@
   width: 152px;
 }
 
+// Button Products (link with button styles)
+
+.btn-products {
+  @extend %btn-transparent-bg;
+  @extend %link-btn-styled;
+
+  width: 108px;
+  height: 38px;
+
+  @include only-desktop {
+    width: 134px;
+    height: 42px;
+
+    font-size: 12px;
+    line-height: calc(15 / 12);
+    border-radius: 8px;
+  }
+}
+
+// Button How it's made (link with button styles)
+
 .btn-how-its-made {
   @extend %btn-transparent-bg-no-border;
+  @extend %link-btn-styled;
 
-  width: 154px;
-  height: 40px;
+  width: 100px;
+  height: 24px;
 
-  line-height: calc(17 / 14);
-  text-decoration: underline;
+  font-size: 12px;
+  line-height: calc(15 / 12);
 
   color: $mainAccentColor;
 
-  @include less-then-desktop {
-    font-size: 12px;
-    line-height: calc(15 / 12);
-  }
-
-  @include less-then-tablet {
-    width: 100px;
-    height: 24px;
-  }
-
   @include only-tablet {
     width: 114px;
-    height: 24px;
+  }
+
+  @include only-desktop {
+    width: 154px;
+    height: 40px;
+
+    font-size: 14px;
+    line-height: calc(17 / 14);
   }
 
   &:hover {
