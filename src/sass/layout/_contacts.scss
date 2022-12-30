@@ -26,6 +26,8 @@
     );
   }
 
+  //   Contacts container
+
   &__container {
     padding-bottom: 60px;
 
@@ -38,6 +40,7 @@
     }
   }
 
+  //   List of outlets
   &__list {
     margin-bottom: 20px;
 
@@ -69,6 +72,7 @@
     }
   }
 
+  //   Card of outlet
   &__item {
     margin: 0 auto;
     padding: 40px 32px 24px;
@@ -92,6 +96,8 @@
       padding: 40px;
     }
   }
+
+  // Title of outlet
 
   &__title {
     margin-bottom: 20px;
@@ -124,6 +130,8 @@
     }
   }
 
+  //   Container for outlet address
+
   &__address-wrap {
     margin-bottom: 24px;
 
@@ -132,47 +140,37 @@
     }
   }
 
+  //   City of outlet
+
   &__city {
     margin-bottom: 8px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: calc(22 / 12);
+
+    @extend %contacts-text;
     letter-spacing: 0.04em;
 
     color: $secondaryColor;
 
     @include only-tablet {
       margin-bottom: 12px;
-
-      font-size: 14px;
-      line-height: calc(26 / 14);
-    }
-
-    @include only-desktop {
-      font-size: 16px;
-      line-height: calc(30 / 16);
     }
   }
 
+  //   Postal address of outlet
+
   &__address {
+    @extend %contacts-text;
+
     font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: calc(22 / 12);
     letter-spacing: 0.04em;
 
     color: $addressColor;
 
-    @include only-tablet {
-      font-size: 14px;
-      line-height: calc(26 / 14);
-    }
-
     @include only-desktop {
-      font-size: 16px;
       line-height: calc(29 / 16);
     }
   }
+
+  //   Working schedule
 
   &__working-time {
     margin-bottom: 24px;
@@ -194,41 +192,23 @@
     }
   }
 
+  //   Working days of outlet
+
   &__working-days {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: calc(22 / 12);
+    @extend %contacts-text;
 
     color: $secondaryColor;
-
-    @include only-tablet {
-      font-size: 14px;
-      line-height: calc(26 / 14);
-    }
-
-    @include only-desktop {
-      font-size: 16px;
-      line-height: calc(30 / 16);
-    }
   }
+
+  //   Working hours of outlet
 
   &__working-hours {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: calc(22 / 12);
+    @extend %contacts-text;
 
     color: $disabledColor;
-
-    @include only-tablet {
-      font-size: 14px;
-      line-height: calc(26 / 14);
-    }
-
-    @include only-desktop {
-      font-size: 16px;
-      line-height: calc(30 / 16);
-    }
   }
+
+  //   Contacts of outlet
 
   &__contacts-list {
     padding-top: 24px;
@@ -265,6 +245,8 @@
       line-height: calc(24 / 16);
     }
   }
+
+  //   Buttons
 
   &__button-list {
     display: flex;

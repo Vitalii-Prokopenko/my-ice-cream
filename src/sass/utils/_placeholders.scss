@@ -141,3 +141,21 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+// Working time text
+
+%contacts-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+
+  @include only-tablet {
+    font-size: 14px;
+    line-height: calc(26 / 14);
+  }
+
+  @include only-desktop {
+    font-size: 16px;
+    line-height: calc(30 / 16);
+  }
+}

@@ -120,6 +120,24 @@
   background-size: cover;
 }
 
+.contacts__working-hours, .contacts__working-days, .contacts__address, .contacts__city {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8333333333;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__working-hours, .contacts__working-days, .contacts__address, .contacts__city {
+    font-size: 14px;
+    line-height: 1.8571428571;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__working-hours, .contacts__working-days, .contacts__address, .contacts__city {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+}
+
 /* == GLOBAL STYLES RESET == */
 /* headings and paragraphs */
 p,
@@ -1583,42 +1601,21 @@ footer {
 }
 .contacts__city {
   margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.8333333333;
   letter-spacing: 0.04em;
   color: #131313;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts__city {
     margin-bottom: 12px;
-    font-size: 14px;
-    line-height: 1.8571428571;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contacts__city {
-    font-size: 16px;
-    line-height: 1.875;
   }
 }
 .contacts__address {
   font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.8333333333;
   letter-spacing: 0.04em;
   color: #d6936d;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contacts__address {
-    font-size: 14px;
-    line-height: 1.8571428571;
-  }
-}
 @media screen and (min-width: 1200px) {
   .contacts__address {
-    font-size: 16px;
     line-height: 1.8125;
   }
 }
@@ -1642,40 +1639,10 @@ footer {
   }
 }
 .contacts__working-days {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.8333333333;
   color: #131313;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contacts__working-days {
-    font-size: 14px;
-    line-height: 1.8571428571;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contacts__working-days {
-    font-size: 16px;
-    line-height: 1.875;
-  }
-}
 .contacts__working-hours {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.8333333333;
   color: #ababab;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contacts__working-hours {
-    font-size: 14px;
-    line-height: 1.8571428571;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contacts__working-hours {
-    font-size: 16px;
-    line-height: 1.875;
-  }
 }
 .contacts__contacts-list {
   padding-top: 24px;
