@@ -1343,6 +1343,125 @@ footer {
      object-fit: cover;
 }
 
+/* === REVIEWS ==== */
+.reviews__container {
+  padding-top: 48px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .reviews__container {
+    padding-top: 40px;
+    padding-bottom: 124px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviews__container {
+    padding-top: 60px;
+    padding-bottom: 144px;
+  }
+}
+.reviews__list {
+  position: relative;
+  margin: 0 auto;
+  width: 280px;
+  height: 442px;
+  outline: 1px solid black;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .reviews__list {
+    width: 704px;
+    height: 312px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviews__list {
+    width: 968px;
+    height: 317px;
+  }
+}
+.reviews__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.reviews__item:nth-child(1) {
+  display: none;
+}
+.reviews__item:nth-child(2) {
+  display: none;
+}
+.reviews__thumb {
+  margin-bottom: 32px;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.reviews__text-wrap {
+  margin-bottom: 32px;
+  padding: 35px 39px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 256px;
+  border-radius: 10px;
+  background-color: #84a178;
+}
+@media screen and (min-width: 768px) {
+  .reviews__text-wrap {
+    padding: 28px 80px;
+    height: 135px;
+    border-radius: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviews__text-wrap {
+    padding: 43px 109px;
+    height: 138px;
+  }
+}
+.reviews__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 2.5833333333;
+  text-align: center;
+  color: #fcfcfc;
+}
+@media screen and (min-width: 768px) {
+  .reviews__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.8571428571;
+    letter-spacing: 0.04em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviews__text {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+}
+.reviews__customer {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.85;
+  text-align: center;
+  color: #131313;
+}
+@media screen and (min-width: 768px) {
+  .reviews__customer {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.875;
+  }
+}
+
 /* === FOOTER ==== */
 .footer-upper-container {
   padding: 0 20px 40px;

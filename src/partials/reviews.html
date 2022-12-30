@@ -1,33 +1,108 @@
 <!-- REVIEWS -->
 <section class="reviews">
-  <div class="container">
-    <ul class="list">
-      <li>
-        <img src="./images/customers/jpg/customer-tablet1-84.jpg" alt="woman" />
-        <p>
-          I love visiting your cafe. You prepare the most delicious ice cream in
-          Los Angeles! In addition, you have beautiful serving, cozy atmosphere
-          and polite staff.
-        </p>
-        <p>Emily, Los Angeles</p>
-      </li>
-      <li>
-        <img src="./images/customers/jpg/customer-tablet2-84.jpg" alt="man" />
-        <p>
-          Every day we come to you with friends after classes in college. We
-          love your ice cream and casual atmosphere!
-        </p>
-        <p>Bryan, New-York</p>
-      </li>
-      <li>
-        <img src="./images/customers/jpg/customer-tablet3-84.jpg" alt="woman" />
-        <p>
-          Ice cream is my passion! I love your chocolate hazelnut ice cream! And
-          I really like the excellent service - always served politely and
-          quickly!
-        </p>
-        <p>Diana, Chicago</p>
-      </li>
-    </ul>
+  <div class="container reviews__container">
+    <div class="reviews__list">
+      <!-- Review 1 -->
+      <div class="reviews__item">
+        <div class="reviews__thumb">
+          <picture class="reviews__picture">
+            <source
+              srcset="
+                ./images/customers/jpg/customer1-@2x-170.jpg 170w,
+                ./images/customers/jpg/customer1-85.jpg       85w
+              "
+              sizes="85px, 100vw"
+              type="image/jpeg"
+            />
+            <source
+              srcset="./images/customers/webp/customer1-@2x-170.webp 170w"
+              sizes="85px, 100vw"
+              type="image/webp"
+            />
+            <img
+              src="./images/customers/jpg/customer1-85.jpg"
+              alt="woman"
+              width="85"
+              height="85"
+            />
+          </picture>
+        </div>
+        <div class="reviews__text-wrap">
+          <p class="reviews__text">
+            I love visiting your cafe. You prepare the most delicious ice cream
+            in Los Angeles! In addition, you have beautiful serving, cozy
+            atmosphere and polite staff.
+          </p>
+        </div>
+        <p class="reviews__customer">Emily, Los Angeles</p>
+      </div>
+      <!-- Review 2 -->
+      <div class="reviews__item">
+        <div class="reviews__thumb">
+          <picture class="reviews__picture">
+            <source
+              srcset="
+                ./images/customers/jpg/customer2-@2x-170.jpg 170w,
+                ./images/customers/jpg/customer2-85.jpg       85w
+              "
+              sizes="85px, 100vw"
+              type="image/jpeg"
+            />
+            <source
+              srcset="./images/customers/webp/customer2-@2x-170.webp 170w"
+              sizes="85px, 100vw"
+              type="image/webp"
+            />
+            <img
+              src="./images/customers/jpg/customer2-85.jpg"
+              alt="man"
+              width="85"
+              height="85"
+            />
+          </picture>
+        </div>
+        <div class="reviews__text-wrap">
+          <p class="reviews__text">
+            Every day we come to you with friends after classes in college. We
+            love your ice cream and casual atmosphere!
+          </p>
+        </div>
+        <p class="reviews__customer">Bryan, New-York</p>
+      </div>
+      <!-- Review 3 -->
+      <div class="reviews__item">
+        <div class="reviews__thumb">
+          <picture class="reviews__picture">
+            <source
+              srcset="
+                ./images/customers/jpg/customer3-@2x-170.jpg 170w,
+                ./images/customers/jpg/customer3-85.jpg       85w
+              "
+              sizes="85px, 100vw"
+              type="image/jpeg"
+            />
+            <source
+              srcset="./images/customers/webp/customer3-@2x-170.webp 170w"
+              sizes="85px, 100vw"
+              type="image/webp"
+            />
+            <img
+              src="./images/customers/jpg/customer3-85.jpg"
+              alt="woman"
+              width="85"
+              height="85"
+            />
+          </picture>
+        </div>
+        <div class="reviews__text-wrap">
+          <p class="reviews__text">
+            Ice cream is my passion! I love your chocolate hazelnut ice cream!
+            And I really like the excellent service - always served politely and
+            quickly!
+          </p>
+        </div>
+        <p class="reviews__customer">Diana, Chicago</p>
+      </div>
+    </div>
   </div>
 </section>
