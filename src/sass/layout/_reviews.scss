@@ -1,0 +1,145 @@
+/* === REVIEWS ==== */
+
+.reviews {
+  &__container {
+    padding-top: 48px;
+    padding-bottom: 40px;
+
+    @include only-tablet {
+      padding-top: 40px;
+      padding-bottom: 124px;
+    }
+
+    @include only-desktop {
+      padding-top: 60px;
+      padding-bottom: 144px;
+    }
+  }
+
+  //   Container for each review
+
+  &__list {
+    position: relative;
+
+    margin: 0 auto;
+
+    width: 280px;
+    height: 442px;
+
+    outline: 1px solid black;
+
+    @include only-tablet {
+      width: 704px;
+      height: 312px;
+    }
+
+    @include only-desktop {
+      width: 968px;
+      height: 317px;
+    }
+  }
+
+  //   Review container
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    &:nth-child(1) {
+      display: none;
+    }
+
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  //   Thumb for image
+
+  &__thumb {
+    margin-bottom: 32px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  //   Wrapper for text of review
+
+  &__text-wrap {
+    margin-bottom: 32px;
+    padding: 35px 39px;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 256px;
+
+    border-radius: 10px;
+    background-color: $mainBgColor;
+
+    @include tablet-and-desktop {
+      padding: 28px 80px;
+
+      height: 135px;
+
+      border-radius: 24px;
+    }
+
+    @include only-desktop {
+      padding: 43px 109px;
+
+      height: 138px;
+    }
+  }
+
+  //   Text of review
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    line-height: calc(31 / 12);
+    text-align: center;
+
+    color: $mainColor;
+
+    @include tablet-and-desktop {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: calc(26 / 14);
+      letter-spacing: 0.04em;
+    }
+
+    @include only-desktop {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+    }
+  }
+
+  //  Customer name
+
+  &__customer {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(37 / 20);
+    text-align: center;
+
+    color: $secondaryColor;
+
+    @include tablet-and-desktop {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: calc(30 / 16);
+    }
+  }
+}
