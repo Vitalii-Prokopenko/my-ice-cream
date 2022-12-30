@@ -1462,6 +1462,278 @@ footer {
   }
 }
 
+/* === CONTACTS === */
+.contacts {
+  background: linear-gradient(to bottom, transparent 353px, 0%, #84a178 1095px);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    background: linear-gradient(to bottom, transparent 299px, 0%, #84a178 360px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    background: linear-gradient(to bottom, transparent 128px, 0%, #84a178 636px);
+  }
+}
+.contacts__container {
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__container {
+    padding-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__container {
+    padding-bottom: 120px;
+  }
+}
+.contacts__list {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-auto-rows: minmax(412px, auto);
+}
+@media screen and (max-width: 767px) {
+  .contacts__list {
+    row-gap: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__list {
+    margin-bottom: 40px;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+    grid-auto-rows: minmax(537px, auto);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__list {
+    margin-bottom: 60px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    grid-auto-rows: minmax(542px, auto);
+  }
+}
+.contacts__item {
+  margin: 0 auto;
+  padding: 40px 32px 24px;
+  border-radius: 24px;
+  text-align: left;
+  background-color: #fcfcfc;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+}
+@media screen and (max-width: 767px) {
+  .contacts__item {
+    width: 280px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__item {
+    padding: 40px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item {
+    padding: 40px;
+  }
+}
+.contacts__title {
+  margin-bottom: 20px;
+  padding: 4px 22px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: #131313;
+  background-color: #f8d24e;
+}
+@media screen and (min-width: 768px) {
+  .contacts__title {
+    margin-bottom: 32px;
+    padding: 4px 13px;
+    font-size: 16px;
+    line-height: 1.375;
+    border-radius: 6px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__title {
+    padding: 4px 14px;
+  }
+}
+.contacts__address-wrap {
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .contacts__address-wrap {
+    margin-bottom: 32px;
+  }
+}
+.contacts__city {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8333333333;
+  letter-spacing: 0.04em;
+  color: #131313;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__city {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.8571428571;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__city {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+}
+.contacts__address {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8333333333;
+  letter-spacing: 0.04em;
+  color: #d6936d;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__address {
+    font-size: 14px;
+    line-height: 1.8571428571;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__address {
+    font-size: 16px;
+    line-height: 1.8125;
+  }
+}
+.contacts__working-time {
+  margin-bottom: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .contacts__working-time {
+    margin-bottom: 32px;
+    padding-top: 32px;
+  }
+}
+.contacts__working-time-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__working-time-item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+.contacts__working-days {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8333333333;
+  color: #131313;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__working-days {
+    font-size: 14px;
+    line-height: 1.8571428571;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__working-days {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+}
+.contacts__working-hours {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8333333333;
+  color: #ababab;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__working-hours {
+    font-size: 14px;
+    line-height: 1.8571428571;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__working-hours {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+}
+.contacts__contacts-list {
+  padding-top: 24px;
+  border-top: 1px solid #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .contacts__contacts-list {
+    padding-top: 32px;
+  }
+}
+.contacts__contacts-item:not(:last-child) {
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 768px) {
+  .contacts__contacts-item:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+.contacts__contacts-link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5833333333;
+  color: #131313;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__contacts-link {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+.contacts__button-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .contacts__button-list {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contacts__button-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__button-item:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
 /* === FOOTER ==== */
 .footer-upper-container {
   padding: 0 20px 40px;
