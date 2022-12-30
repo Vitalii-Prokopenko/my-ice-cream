@@ -8,9 +8,37 @@
     transparent 130px
   );
 
+  @include only-tablet {
+    background: linear-gradient(
+      to bottom,
+      $mainBgColor 204px,
+      0%,
+      transparent 243px
+    );
+  }
+
+  @include only-desktop {
+    background: linear-gradient(
+      to bottom,
+      $mainBgColor 178px,
+      0%,
+      transparent 404px
+    );
+  }
+
   &__container {
     padding-top: 32px;
     padding-bottom: 32px;
+
+    @include only-tablet {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    @include only-desktop {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
   }
 
   &__list {
@@ -23,6 +51,18 @@
     border-radius: 8px;
     overflow: hidden;
     outline: 1px solid black;
+
+    @include only-tablet {
+      width: 704px;
+      height: 327px;
+      border-radius: 18px;
+    }
+
+    @include only-desktop {
+      width: 1013px;
+      height: 422px;
+      border-radius: 24px;
+    }
   }
 
   &__picture {
