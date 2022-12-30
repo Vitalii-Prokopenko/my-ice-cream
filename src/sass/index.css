@@ -1702,12 +1702,24 @@ footer {
 }
 
 /* === FOOTER ==== */
+footer {
+  background-color: #84a178;
+}
+
 .footer-upper-container {
   padding: 0 20px 40px;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
+  .footer-upper-container {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 768px) {
   .footer-upper-container {
     padding: 0 32px 32px 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1887,6 +1899,45 @@ footer {
 .footer__phone-link:hover, .footer__phone-link:focus {
   color: #f8d24e;
 }
+.footer__sl-list {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__sl-list {
+    margin-bottom: 34px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__sl-list {
+    margin-bottom: 40px;
+  }
+}
+.footer__sl-item:not(:last-child) {
+  margin-right: 20px;
+}
+@media screen and (min-width: 768px) {
+  .footer__sl-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.footer__sl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #f8d24e;
+}
+.footer__sl-icon {
+  fill: #84a178;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__sl:hover .footer__sl-icon, .footer__sl:focus .footer__sl-icon {
+  fill: #fcfcfc;
+}
 .footer__rights {
   font-weight: 700;
   font-size: 14px;
@@ -1914,45 +1965,4 @@ footer {
   .footer__rights:not(:last-child) {
     margin-right: 4px;
   }
-}
-
-.social-contacts__list {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: flex-end;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .social-contacts__list {
-    margin-bottom: 34px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .social-contacts__list {
-    margin-bottom: 40px;
-  }
-}
-.social-contacts__item:not(:last-child) {
-  margin-right: 20px;
-}
-@media screen and (min-width: 768px) {
-  .social-contacts__item:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
-.social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background-color: #f8d24e;
-}
-.social-link-icon {
-  fill: #84a178;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-link:hover .social-link-icon, .social-link:focus .social-link-icon {
-  fill: #fcfcfc;
 }/*# sourceMappingURL=index.css.map */
