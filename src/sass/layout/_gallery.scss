@@ -1,0 +1,41 @@
+/* === GALLERY === */
+
+.gallery {
+  background: linear-gradient(
+    to bottom,
+    $mainBgColor 64px,
+    0%,
+    transparent 130px
+  );
+
+  &__container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &__list {
+    position: relative;
+
+    margin: 0 auto;
+
+    width: 280px;
+    height: 130px;
+    border-radius: 8px;
+    overflow: hidden;
+    outline: 1px solid black;
+  }
+
+  &__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    // flex is used for object-fit to work with picture
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
