@@ -1,0 +1,55 @@
+<!-- MOBILE MENU -->
+<div class="menu-container mobile-menu js-menu-container" id="mobile-menu">
+  <!-- Close menu button -->
+  <button class="btn mobile-menu-close menu-toggle js-close-menu">
+    <svg
+      class="mobile-menu-close__icon"
+      width="32"
+      height="32"
+      aria-label="Mobile menu button"
+    >
+      <use
+        class="icon-open"
+        href="./images/icons/svg-icons.svg#icon-mobile-close"
+      ></use>
+    </svg>
+  </button>
+  <!-- Logo -->
+  <a href="" class="link header__logo mobile-menu__logo">
+    <img
+      class="header__logo-img"
+      srcset="
+        ./images/logo/logo-mobile-40-37.png  40w,
+        ./images/logo/logo-tablet-48-44.png  48w,
+        ./images/logo/logo-desktop-60-65.png 60w
+      "
+      sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 480px) 40px, 100vw"
+      src="./images/logo/logo-mobile-40-37.png"
+      alt="logo"
+      width="40"
+      height="37"
+    />
+  </a>
+  <!-- Mobile menu -->
+  <ul class="list mobile-menu__list">
+    <li class="mobile-menu__item">
+      <a href="index.html" class="link mobile-menu__link">Home</a>
+    </li>
+    <li class="mobile-menu__item">
+      <a href="#about" class="link mobile-menu__link">How it’s made?</a>
+    </li>
+    <li class="mobile-menu__item">
+      <a href="#products" class="link mobile-menu__link">Our products</a>
+    </li>
+    <li class="mobile-menu__item">
+      <a href="#contacts" class="link mobile-menu__link">Contact</a>
+    </li>
+  </ul>
+  <!-- Button Buy now -->
+  <button class="btn btn-buy-now mobile-menu__buy-now">
+    Buy now
+    <svg class="btn-buy-now__icon" width="12" height="12">
+      <use href="./images/icons/svg-icons.svg#icon-right-arrow"></use>
+    </svg>
+  </button>
+</div>

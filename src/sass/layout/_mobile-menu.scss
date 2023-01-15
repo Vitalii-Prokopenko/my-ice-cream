@@ -1,0 +1,92 @@
+/* === MOBILE MENU ===*/
+
+.menu-container {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 12px 31px 64px 32px;
+  width: 320px;
+  height: 100vh;
+
+  background-color: $mainBgColor;
+  outline: 1px solid crimson;
+
+  //   transform: translateX(-320px);
+  @include my-transition(transform);
+
+  // &.is-open {
+  //     transform: translateX(0);
+  // }
+
+  @include only-tablet {
+    padding: 20px 32px;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.mobile-menu {
+  &-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+
+    margin-bottom: 51px;
+
+    @extend %btn-icons;
+
+    &__icon {
+      fill: $phoneContactColor;
+      @include my-transition(fill);
+    }
+
+    &:hover &__icon,
+    &:focus &__icon {
+      fill: $mainAccentColor;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 51px;
+
+    align-self: flex-start;
+  }
+
+  &__list {
+    margin-bottom: auto;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+
+    @include only-tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: calc(39 / 32);
+    text-align: center;
+
+    color: $mainColor;
+    @include my-transition(color);
+
+    @include only-tablet {
+      font-size: 48px;
+      line-height: calc(59 / 48);
+    }
+
+    &:hover,
+    &:focus {
+      color: $secondaryColor;
+    }
+  }
+
+  &__buy-now {
+  }
+}
