@@ -53,6 +53,10 @@
     margin-bottom: 51px;
 
     align-self: flex-start;
+
+    @include only-tablet {
+      margin-bottom: 76px;
+    }
   }
 
   &__list {
