@@ -1,11 +1,11 @@
-<!-- MODAL WINDOWS -->
-<!-- Buy now -->
+<!-- === MODAL WINDOWS === -->
+<!-- BUY NOW -->
 <div class="backdrop is-hidden">
   <div class="modal">
     <div class="modal__container">
       <!-- Close button -->
       <button class="btn modal__close-btn">
-        <svg class="modal__close__icon" width="20" height="20">
+        <svg class="modal__close-icon" width="20" height="20">
           <use href="./images/icons/svg-icons.svg#icon-modal-cross"></use>
         </svg>
       </button>
@@ -14,53 +14,92 @@
       <!-- Form -->
       <form class="modal__form">
         <!-- Check-boxes -->
-        <ul class="modal__form-list">
-          <li class="modal__product-item">
-            <label for="ice-cream"></label>
-            <input type="checkbox" id="ice-cream" />
-            <div class="modal__product-circle"></div>
-            <p class="modal__product-name">Ice Cream</p>
+        <ul class="list modal__form-checkbox-list">
+          <li class="modal__form-item">
+            <label for="ice-cream">
+              <input
+                class="modal__product-checkbox ice-cream"
+                type="checkbox"
+                id="ice-cream"
+              />
+              <div class="modal__product-item modal__product-item--green">
+                <div
+                  class="modal__product-circle modal__product-circle--green"
+                ></div>
+                <p class="modal__product-name">Ice Cream</p>
+              </div>
+            </label>
           </li>
-          <li class="modal__product-item">
-            <label for="ice-coffee"></label>
-            <input type="checkbox" id="ice-coffee" />
-            <div class="modal__product-circle"></div>
-            <p class="modal__product-name">Ice Coffee</p>
+          <li class="modal__form-item">
+            <label for="ice-coffee">
+              <input
+                class="modal__product-checkbox ice-coffee"
+                type="checkbox"
+                id="ice-coffee"
+              />
+              <div class="modal__product-item modal__product-item--yellow">
+                <div
+                  class="modal__product-circle modal__product-circle--yellow"
+                ></div>
+                <p class="modal__product-name">Ice Coffee</p>
+              </div>
+            </label>
           </li>
-          <li class="modal__product-item">
-            <label for="milkshake"></label>
-            <input type="checkbox" id="milkshake" />
-            <div class="modal__product-circle"></div>
-            <p class="modal__product-name">Milkshake</p>
+          <li class="modal__form-item">
+            <label for="milkshake">
+              <input
+                class="modal__product-checkbox milkshake"
+                type="checkbox"
+                id="milkshake"
+              />
+              <div class="modal__product-item modal__product-item--chocolate">
+                <div
+                  class="modal__product-circle modal__product-circle--chocolate"
+                ></div>
+                <p class="modal__product-name">Milkshake</p>
+              </div>
+            </label>
           </li>
         </ul>
-        <div class="modal__form-field">
-          <label for="user-name"></label>
-          <input
-            type="text"
-            name="user-name"
-            id="user-name"
-            placeholder="Name"
-          />
-        </div>
-        <div class="modal__form-field">
-          <label for="user-phone"></label>
-          <input
-            type="tel"
-            name="user-phone"
-            id="user-phone"
-            placeholder="Phone"
-          />
-        </div>
-        <div class="modal__form-field">
-          <label for="user-name"></label>
-          <textarea
-            type="text"
-            name="comment"
-            id="user-comment"
-            placeholder="Comment"
-          />
-        </div>
+        <ul class="list modal__form-input-list">
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-name"></label>
+              <input
+                class="modal__form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="Name"
+              />
+            </div>
+          </li>
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-phone"></label>
+              <input
+                class="modal__form-input"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+                placeholder="Phone"
+              />
+            </div>
+          </li>
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-name"></label>
+              <textarea
+                class="modal__form-input comment"
+                type="text"
+                name="comment"
+                id="user-comment"
+                placeholder="Comment"
+              />
+            </div>
+          </li>
+        </ul>
+
         <!-- Submit button -->
         <div class="modal__form-field">
           <button type="submit" class="btn modal__submit-button">Submit</button>

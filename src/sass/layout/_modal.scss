@@ -1,7 +1,255 @@
 /*=== MODAL WINDOWS ===*/
 /* Modal window Buy now */
 .modal {
+  margin: 0 auto;
   width: 280px;
-  height: 100vh;
-  background-color: crimson;
+  background-color: $phoneContactColor;
+  outline: 1px solid crimson;
+
+  &__container {
+    position: relative;
+
+    padding: 28px 28px 29px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    @extend %btn-icons;
+  }
+
+  &__close-icon {
+    fill: $secondaryColor;
+    transition: $myFillTransition;
+  }
+
+  &__close-btn:hover &__close-icon,
+  &__close-btn:focus &__close-icon {
+    fill: $secondaryAccentColor;
+  }
+
+  // Form title
+
+  &__title {
+    margin-bottom: 83px;
+
+    font-family: $secondaryFont;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    text-align: center;
+
+    color: $secondaryColor;
+  }
+
+  // Product list
+
+  &__form-checkbox-list {
+    margin-bottom: 32px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-auto-rows: minmax(136px, auto);
+    row-gap: 82px;
+  }
+
+  // Cards
+
+  &__product-item {
+    position: relative;
+
+    padding: 96px 10px 20px;
+    width: 132px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+
+    @include tablet-and-desktop {
+      padding: 95px 13px 20px;
+    }
+
+    &--green,
+    &--yellow,
+    &--chocolate {
+      background-color: transparent;
+      transition: $myBgColorTransition;
+    }
+
+    &--green {
+      border-color: $colorGreen;
+      &:hover {
+        background-color: $colorGreen;
+      }
+    }
+
+    &--yellow {
+      border-color: $colorYellow;
+      &:hover {
+        background-color: $colorYellow;
+      }
+    }
+
+    &--chocolate {
+      border-color: $colorChocolate;
+      &:hover {
+        background-color: $colorChocolate;
+      }
+    }
+  }
+
+  // Product checkbox
+
+  &__product-checkbox {
+    display: none;
+  }
+
+  .ice-cream:checked + &__product-item {
+    background-color: $colorGreen;
+  }
+
+  .ice-coffee:checked + &__product-item {
+    background-color: $colorYellow;
+  }
+
+  .milkshake:checked + &__product-item {
+    background-color: $colorChocolate;
+  }
+
+  // Circle thumbs for images
+
+  &__product-circle {
+    position: absolute;
+    top: -66px;
+    left: -2px;
+    z-index: 2;
+
+    width: 132px;
+    height: 132px;
+
+    border-radius: 50%;
+
+    &--green {
+      background: linear-gradient(
+          0deg,
+          rgba(156, 190, 143, 0.7),
+          rgba(156, 190, 143, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+
+      &::before {
+        @extend %product-img-modal;
+        background-image: url(../images/products/png/product-modal1-132.png);
+        @include pixel-ratio-2x {
+          background-image: url(../images/products/png/product-modal1-@2x-264.png);
+        }
+      }
+    }
+
+    &--yellow {
+      background: linear-gradient(
+          0deg,
+          rgba(248, 210, 78, 0.7),
+          rgba(248, 210, 78, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+
+      &::before {
+        @extend %product-img-modal;
+        background-image: url(../images/products/png/product-modal2-132.png);
+        @include pixel-ratio-2x {
+          background-image: url(../images/products/png/product-modal2-@2x-264.png);
+        }
+      }
+    }
+
+    &--chocolate {
+      background: linear-gradient(
+          0deg,
+          rgba(213, 117, 63, 0.7),
+          rgba(213, 117, 63, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+
+      &::before {
+        @extend %product-img-modal;
+        background-image: url(../images/products/png/product-modal3-132.png);
+        @include pixel-ratio-2x {
+          background-image: url(../images/products/png/product-modal3-@2x-264.png);
+        }
+      }
+    }
+  }
+
+  &__product-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $secondaryColor;
+  }
+
+  &__form-input-list {
+    margin-bottom: 26px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__form-input-item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &__form-input {
+    padding: 8px 12px;
+    width: 224px;
+    height: 32px;
+
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid $mainBgColor;
+    border-radius: 10px;
+  }
+
+  &__form-input {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(17 / 12);
+
+    color: $secondaryColor;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.01em;
+
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+
+  .comment {
+    height: 65px;
+    resize: none;
+
+    // &::placeholder {
+    //   font-size: 12px;
+    //   line-height: 14px;
+    //   letter-spacing: 0.01em;
+
+    //   color: rgba(117, 117, 117, 0.5);
+    // }
+  }
+
+  &__form-field:focus-within &__form-input {
+    outline: none;
+  }
 }

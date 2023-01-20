@@ -126,6 +126,22 @@
   }
 }
 
+// Product card positioned image for modal form
+
+%product-img-modal {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 0;
+
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 // Advantages icons
 
 %icon-bg {

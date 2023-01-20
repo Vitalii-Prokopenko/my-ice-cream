@@ -127,15 +127,15 @@
     }
 
     &--green {
-      background-color: #aec6a5;
+      background-color: $colorGreen;
     }
 
     &--yellow {
-      background-color: #efd478;
+      background-color: $colorYellow;
     }
 
     &--brown {
-      background-color: #d6936d;
+      background-color: $colorChocolate;
     }
 
     &:hover {
