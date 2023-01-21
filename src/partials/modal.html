@@ -71,8 +71,8 @@
                 name="user-name"
                 id="user-name"
                 placeholder="Name"
-                pattern="[A-Za-z]{1,4}"
-                title="Name must not exceed 4 characters"
+                pattern="[A-Z][a-z]{1,20}"
+                title="Type your name in English, start with uppercase letter and do not exceed 20 letters"
                 required
               />
             </div>
@@ -86,6 +86,8 @@
                 name="user-phone"
                 id="user-phone"
                 placeholder="Phone"
+                pattern="\(?(\d{3})\)?[-\s]?(\d{3})[-\s]?(\d{2})[-\s]?(\d{2})"
+                title="Type (000) 000-00-00 or (000) 000 00 00"
                 required
               />
             </div>
@@ -106,7 +108,9 @@
 
         <!-- Submit button -->
         <div class="modal__form-field">
-          <button type="submit" class="btn modal__submit-button">Submit</button>
+          <button type="submit" class="btn submit-btn modal__submit-button">
+            Submit
+          </button>
         </div>
       </form>
     </div>

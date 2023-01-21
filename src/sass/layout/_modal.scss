@@ -44,6 +44,14 @@
     color: $secondaryColor;
   }
 
+  // Form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   // Product list
 
   &__form-checkbox-list {
@@ -215,17 +223,14 @@
     width: 224px;
     height: 32px;
 
-    background: rgba(248, 210, 78, 0.1);
-    border: 1px solid $mainBgColor;
-    border-radius: 10px;
-  }
-
-  &__form-input {
     font-weight: 400;
     font-size: 12px;
     line-height: calc(17 / 12);
 
     color: $secondaryColor;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid $mainBgColor;
+    border-radius: 10px;
 
     &::placeholder {
       font-weight: 400;
@@ -233,6 +238,10 @@
       line-height: calc(17 / 12);
 
       color: $secondaryColor;
+    }
+
+    &:invalid {
+      border-color: crimson;
     }
   }
 
@@ -242,6 +251,7 @@
   }
 
   &__form-field:focus-within &__form-input {
+    border-color: $mainAccentColor;
     outline: none;
   }
 }
