@@ -2,10 +2,6 @@
 
 @import './logo';
 
-// Modal windows
-
-@import './modal';
-
 // Header
 
 @import './header';
@@ -45,3 +41,15 @@
 // Footer
 
 @import './footer';
+
+// Modal windows (common)
+
+@import './modals/modal-common';
+
+// Modal window Buy now
+
+@import './modals/modal-buy-now';
+
+// Modal window Ingredients
+
+@import './modals/modal-ingredients';

@@ -110,6 +110,13 @@
   border: none;
   border-radius: 10px;
 
+  @include tablet-and-desktop {
+    width: 121px;
+
+    font-size: 14px;
+    line-height: calc(1 / 14);
+  }
+
   &:hover {
     background-color: $secondaryAccentColor;
   }

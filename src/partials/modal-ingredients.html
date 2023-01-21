@@ -1,0 +1,120 @@
+<!-- INGREDIENTS -->
+<div class="backdrop is-hidden">
+  <div class="modal">
+    <div class="modal__container modal__container-ingredients">
+      <!-- Close button -->
+      <button class="btn modal__close-btn">
+        <svg class="modal__close-icon" width="20" height="20">
+          <use href="./images/icons/svg-icons.svg#icon-modal-cross"></use>
+        </svg>
+      </button>
+      <!-- Title -->
+      <p class="modal__title modal__title-ingredients">Chololate icecream</p>
+      <!-- Product circle -->
+      <div
+        class="modal__circle-ingredients modal__circle-ingredients--green"
+      ></div>
+      <!-- Product elements -->
+      <ul class="list modal-elements__list">
+        <li class="modal-elements__item">
+          <div class="modal-elements__name">kcal</div>
+          <div class="modal-elements__quantity">320</div>
+        </li>
+        <li class="modal-elements__item">
+          <div class="modal-elements__name">Prote...</div>
+          <div class="modal-elements__quantity">4g</div>
+        </li>
+        <li class="modal-elements__item">
+          <div class="modal-elements__name">Fats</div>
+          <div class="modal-elements__quantity">8,2g</div>
+        </li>
+        <li class="modal-elements__item">
+          <div class="modal-elements__name">Carbs</div>
+          <div class="modal-elements__quantity">40,4g</div>
+        </li>
+      </ul>
+      <!-- Product ingredients -->
+      <p class="product-ingredients__title">Ingredients</p>
+      <ul class="list product-ingredients__list">
+        <li class="product-ingredients__item">
+          <p>Milk</p>
+          <p>100ml</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p>Belgian chocolate</p>
+          <p>20g</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p>Cream</p>
+          <p>150 ml</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p>Cocoa powder</p>
+          <p>30g</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p>Sugar</p>
+          <p>40g</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p>Vanilla sugar</p>
+          <p>10g</p>
+        </li>
+      </ul>
+      <!-- Form -->
+      <form class="modal__form">
+        <ul class="list modal__form-input-list">
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-name"></label>
+              <input
+                class="modal__form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="Name"
+                pattern="[A-Z][a-z]{1,20}"
+                title="Type your name in English, start with uppercase letter and do not exceed 20 letters"
+                required
+              />
+            </div>
+          </li>
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-phone"></label>
+              <input
+                class="modal__form-input"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+                placeholder="Phone"
+                pattern="\(?(\d{3})\)?[-\s]?(\d{3})[-\s]?(\d{2})[-\s]?(\d{2})"
+                title="Type (000) 000-00-00 or (000) 000 00 00"
+                required
+              />
+            </div>
+          </li>
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-name"></label>
+              <textarea
+                class="modal__form-input comment"
+                type="text"
+                name="comment"
+                id="user-comment"
+                placeholder="Comment"
+              ></textarea>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Submit button -->
+        <div class="modal__form-field">
+          <button type="submit" class="btn submit-btn modal__submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
