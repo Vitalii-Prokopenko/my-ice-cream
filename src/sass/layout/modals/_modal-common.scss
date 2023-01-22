@@ -2,7 +2,7 @@
 .backdrop {
   visibility: hidden;
   opacity: 0;
-  transform: scale(0);
+  // transform: scale(0);
   pointer-events: none;
 
   position: fixed;
@@ -27,14 +27,6 @@
   //   transform: scale(0);
   //   pointer-events: none;
   // }
-}
-
-.modal.active,
-.backdrop.active {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  z-index: 999;
 }
 
 /* === COMMON STYLES OF MODAL WINDOWS === */
@@ -170,4 +162,12 @@
     border-color: $mainAccentColor;
     outline: none;
   }
+}
+
+.modal.active,
+.backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  // transform: scale(1);
+  z-index: 999;
 }
