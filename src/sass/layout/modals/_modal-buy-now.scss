@@ -238,79 +238,79 @@
     color: $secondaryColor;
   }
 
-  &__form-input-list {
-    margin-bottom: 26px;
+  //   &__form-input-list {
+  //     margin-bottom: 26px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: center;
 
-    @include tablet-and-desktop {
-      margin-bottom: 32px;
-    }
-  }
+  //     @include tablet-and-desktop {
+  //       margin-bottom: 32px;
+  //     }
+  //   }
 
-  &__form-input-item:not(:last-child) {
-    margin-bottom: 12px;
+  //   &__form-input-item:not(:last-child) {
+  //     margin-bottom: 12px;
 
-    @include tablet-and-desktop {
-      margin-bottom: 16px;
-    }
-  }
+  //     @include tablet-and-desktop {
+  //       margin-bottom: 16px;
+  //     }
+  //   }
 
-  &__form-input {
-    padding: 8px 12px;
-    width: 224px;
-    height: 32px;
+  //   &__form-input {
+  //     padding: 8px 12px;
+  //     width: 224px;
+  //     height: 32px;
 
-    font-weight: 400;
-    font-size: 12px;
-    line-height: calc(17 / 12);
+  //     font-weight: 400;
+  //     font-size: 12px;
+  //     line-height: calc(17 / 12);
 
-    color: $secondaryColor;
-    background: rgba(248, 210, 78, 0.1);
-    border: 1px solid $mainBgColor;
-    border-radius: 10px;
+  //     color: $secondaryColor;
+  //     background: rgba(248, 210, 78, 0.1);
+  //     border: 1px solid $mainBgColor;
+  //     border-radius: 10px;
 
-    @include tablet-and-desktop {
-      padding: 11px 16px;
-      width: 368px;
-      height: 42px;
+  //     @include tablet-and-desktop {
+  //       padding: 11px 16px;
+  //       width: 368px;
+  //       height: 42px;
 
-      font-size: 14px;
-      line-height: calc(20 / 14);
-    }
+  //       font-size: 14px;
+  //       line-height: calc(20 / 14);
+  //     }
 
-    &::placeholder {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: calc(17 / 12);
+  //     &::placeholder {
+  //       font-weight: 400;
+  //       font-size: 12px;
+  //       line-height: calc(17 / 12);
 
-      color: $secondaryColor;
+  //       color: $secondaryColor;
 
-      @include tablet-and-desktop {
-        font-size: 14px;
-        line-height: calc(20 / 14);
-      }
-    }
+  //       @include tablet-and-desktop {
+  //         font-size: 14px;
+  //         line-height: calc(20 / 14);
+  //       }
+  //     }
 
-    &:not(:placeholder-shown):invalid {
-      border-color: crimson;
-    }
-  }
+  //     &:not(:placeholder-shown):invalid {
+  //       border-color: crimson;
+  //     }
+  //   }
 
-  .comment {
-    height: 65px;
-    resize: none;
+  //   .comment {
+  //     height: 65px;
+  //     resize: none;
 
-    @include tablet-and-desktop {
-      height: 84px;
-    }
-  }
+  //     @include tablet-and-desktop {
+  //       height: 84px;
+  //     }
+  //   }
 
-  &__form-field:focus-within &__form-input {
-    border-color: $mainAccentColor;
-    outline: none;
-  }
+  //   &__form-field:focus-within &__form-input {
+  //     border-color: $mainAccentColor;
+  //     outline: none;
+  //   }
 }

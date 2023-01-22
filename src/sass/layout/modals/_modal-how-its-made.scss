@@ -1,0 +1,49 @@
+/* === HOW IT'S MADE === */
+.modal {
+  &__container-about {
+    padding: 28px;
+    width: 100%;
+
+    @include tablet-and-desktop {
+      padding: 32px 60px;
+    }
+  }
+
+  &__title-about {
+    margin-bottom: 20px;
+
+    @include tablet-and-desktop {
+      margin-bottom: 32px;
+    }
+  }
+
+  &-about__text {
+    width: 100%;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+
+    color: $secondaryColor;
+  }
+
+  &-about__video-wrap {
+    margin-bottom: 20px;
+
+    width: 224px;
+    height: 199px;
+
+    @include tablet-and-desktop {
+      margin-bottom: 32px;
+
+      width: 448px;
+      height: 205px;
+    }
+  }
+
+  &-about__video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}

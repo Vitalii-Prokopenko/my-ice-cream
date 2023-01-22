@@ -1,0 +1,58 @@
+/* === LOCATIONS === */
+.modal {
+  &__container-about {
+    padding: 28px;
+    width: 100%;
+
+    @include tablet-and-desktop {
+      padding: 32px 60px;
+    }
+  }
+
+  &__title-location {
+    margin-bottom: 20px;
+
+    @include tablet-and-desktop {
+      margin-bottom: 32px;
+    }
+  }
+
+  &-location__map-wrap {
+    margin-bottom: 24px;
+
+    width: 224px;
+    height: 199px;
+
+    @include tablet-and-desktop {
+      margin-bottom: 32px;
+
+      width: 448px;
+      height: 260px;
+    }
+  }
+
+  &-location__map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    pointer-events: none;
+  }
+
+  &-location__open-map-btn {
+    margin: 0 auto;
+
+    @extend %link-btn-styled;
+    @extend %btn-colored-bg;
+
+    width: 145px;
+    height: 42px;
+
+    font-size: 12px;
+    line-height: calc(15 / 12);
+
+    @include tablet-and-desktop {
+      font-size: 14px;
+      line-height: calc(17 / 14);
+    }
+  }
+}

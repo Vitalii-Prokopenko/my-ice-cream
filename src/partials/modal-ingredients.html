@@ -1,6 +1,7 @@
-<!-- INGREDIENTS -->
+<!-- === INGREDIENTS === -->
 <div class="backdrop is-hidden">
-  <div class="modal">
+  <!-- === Ice-cream green card === -->
+  <div class="modal modal__ice-cream-green">
     <div class="modal__container modal__container-ingredients">
       <!-- Close button -->
       <button class="btn modal__close-btn">
@@ -9,56 +10,364 @@
         </svg>
       </button>
       <!-- Title -->
-      <p class="modal__title modal__title-ingredients">Chololate icecream</p>
+      <p class="modal__title modal__title-ingredients">Chocolate ice cream</p>
       <!-- Product circle -->
       <div
         class="modal__circle-ingredients modal__circle-ingredients--green"
       ></div>
       <!-- Product elements -->
-      <ul class="list modal-elements__list">
-        <li class="modal-elements__item">
-          <div class="modal-elements__name">kcal</div>
-          <div class="modal-elements__quantity">320</div>
+      <ul class="list product-elements__list">
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--green">
+            kcal
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--green"
+          >
+            320
+          </div>
         </li>
-        <li class="modal-elements__item">
-          <div class="modal-elements__name">Prote...</div>
-          <div class="modal-elements__quantity">4g</div>
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--green">
+            Prote...
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--green"
+          >
+            4g
+          </div>
         </li>
-        <li class="modal-elements__item">
-          <div class="modal-elements__name">Fats</div>
-          <div class="modal-elements__quantity">8,2g</div>
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--green">
+            Fats
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--green"
+          >
+            8,2g
+          </div>
         </li>
-        <li class="modal-elements__item">
-          <div class="modal-elements__name">Carbs</div>
-          <div class="modal-elements__quantity">40,4g</div>
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--green">
+            Carbs
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--green"
+          >
+            40,4g
+          </div>
         </li>
       </ul>
       <!-- Product ingredients -->
       <p class="product-ingredients__title">Ingredients</p>
       <ul class="list product-ingredients__list">
         <li class="product-ingredients__item">
-          <p>Milk</p>
-          <p>100ml</p>
+          <p class="product-ingredients__name">Milk</p>
+          <p class="product-ingredients__quantity">100ml</p>
         </li>
         <li class="product-ingredients__item">
-          <p>Belgian chocolate</p>
-          <p>20g</p>
+          <p class="product-ingredients__name">Belgian chocolate</p>
+          <p class="product-ingredients__quantity">20g</p>
         </li>
         <li class="product-ingredients__item">
-          <p>Cream</p>
-          <p>150 ml</p>
+          <p class="product-ingredients__name">Cream</p>
+          <p class="product-ingredients__quantity">150 ml</p>
         </li>
         <li class="product-ingredients__item">
-          <p>Cocoa powder</p>
-          <p>30g</p>
+          <p class="product-ingredients__name">Cocoa powder</p>
+          <p class="product-ingredients__quantity">30g</p>
         </li>
         <li class="product-ingredients__item">
-          <p>Sugar</p>
-          <p>40g</p>
+          <p class="product-ingredients__name">Sugar</p>
+          <p class="product-ingredients__quantity">40g</p>
         </li>
         <li class="product-ingredients__item">
-          <p>Vanilla sugar</p>
-          <p>10g</p>
+          <p class="product-ingredients__name">Vanilla sugar</p>
+          <p class="product-ingredients__quantity">10g</p>
+        </li>
+      </ul>
+      <!-- Form -->
+      <form class="modal__form">
+        <ul class="list modal__form-input-list">
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-name"></label>
+              <input
+                class="modal__form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="Name"
+                pattern="[A-Z][a-z]{1,20}"
+                title="Type your name in English, start with uppercase letter and do not exceed 20 letters"
+                required
+              />
+            </div>
+          </li>
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-phone"></label>
+              <input
+                class="modal__form-input"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+                placeholder="Phone"
+                pattern="\(?(\d{3})\)?[-\s]?(\d{3})[-\s]?(\d{2})[-\s]?(\d{2})"
+                title="Type (000) 000-00-00 or (000) 000 00 00"
+                required
+              />
+            </div>
+          </li>
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-name"></label>
+              <textarea
+                class="modal__form-input comment"
+                type="text"
+                name="comment"
+                id="user-comment"
+                placeholder="Comment"
+              ></textarea>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Submit button -->
+        <div class="modal__form-field">
+          <button type="submit" class="btn submit-btn modal__submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- === Ice coffee yellow card === -->
+  <div class="modal modal__ice-coffee-yellow">
+    <div class="modal__container modal__container-ingredients">
+      <!-- Close button -->
+      <button class="btn modal__close-btn">
+        <svg class="modal__close-icon" width="20" height="20">
+          <use href="./images/icons/svg-icons.svg#icon-modal-cross"></use>
+        </svg>
+      </button>
+      <!-- Title -->
+      <p class="modal__title modal__title-ingredients">Chocolate ice coffee</p>
+      <!-- Product circle -->
+      <div
+        class="modal__circle-ingredients modal__circle-ingredients--yellow"
+      ></div>
+      <!-- Product elements -->
+      <ul class="list product-elements__list">
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--yellow">
+            kcal
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--yellow"
+          >
+            130
+          </div>
+        </li>
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--yellow">
+            Prote...
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--yellow"
+          >
+            4g
+          </div>
+        </li>
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--yellow">
+            Fats
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--yellow"
+          >
+            4,3g
+          </div>
+        </li>
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--yellow">
+            Carbs
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--yellow"
+          >
+            32,0g
+          </div>
+        </li>
+      </ul>
+      <!-- Product ingredients -->
+      <p class="product-ingredients__title">Ingredients</p>
+      <ul class="list product-ingredients__list">
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Vanilla ice cream</p>
+          <p class="product-ingredients__quantity">300g</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Brazil coffee</p>
+          <p class="product-ingredients__quantity">15g</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Cream</p>
+          <p class="product-ingredients__quantity">200ml</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Cocoa powder</p>
+          <p class="product-ingredients__quantity">20g</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Sugar</p>
+          <p class="product-ingredients__quantity">35g</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Vanilla sugar</p>
+          <p class="product-ingredients__quantity">10g</p>
+        </li>
+      </ul>
+      <!-- Form -->
+      <form class="modal__form">
+        <ul class="list modal__form-input-list">
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-name"></label>
+              <input
+                class="modal__form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="Name"
+                pattern="[A-Z][a-z]{1,20}"
+                title="Type your name in English, start with uppercase letter and do not exceed 20 letters"
+                required
+              />
+            </div>
+          </li>
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-phone"></label>
+              <input
+                class="modal__form-input"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+                placeholder="Phone"
+                pattern="\(?(\d{3})\)?[-\s]?(\d{3})[-\s]?(\d{2})[-\s]?(\d{2})"
+                title="Type (000) 000-00-00 or (000) 000 00 00"
+                required
+              />
+            </div>
+          </li>
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-name"></label>
+              <textarea
+                class="modal__form-input comment"
+                type="text"
+                name="comment"
+                id="user-comment"
+                placeholder="Comment"
+              ></textarea>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Submit button -->
+        <div class="modal__form-field">
+          <button type="submit" class="btn submit-btn modal__submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- === Milkshake chocolate card === -->
+  <div class="modal modal__milkshake-chocolate">
+    <div class="modal__container modal__container-ingredients">
+      <!-- Close button -->
+      <button class="btn modal__close-btn">
+        <svg class="modal__close-icon" width="20" height="20">
+          <use href="./images/icons/svg-icons.svg#icon-modal-cross"></use>
+        </svg>
+      </button>
+      <!-- Title -->
+      <p class="modal__title modal__title-ingredients">Vanilla milkshake</p>
+      <!-- Product circle -->
+      <div
+        class="modal__circle-ingredients modal__circle-ingredients--chocolate"
+      ></div>
+      <!-- Product elements -->
+      <ul class="list product-elements__list">
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--chocolate">
+            kcal
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--chocolate"
+          >
+            170
+          </div>
+        </li>
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--chocolate">
+            Prote...
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--chocolate"
+          >
+            666g
+          </div>
+        </li>
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--chocolate">
+            Fats
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--chocolate"
+          >
+            9,0g
+          </div>
+        </li>
+        <li class="product-elements__item">
+          <div class="product-elements__name product-elements__name--chocolate">
+            Carbs
+          </div>
+          <div
+            class="product-elements__quantity product-elements__quantity--chocolate"
+          >
+            16,0g
+          </div>
+        </li>
+      </ul>
+      <!-- Product ingredients -->
+      <p class="product-ingredients__title">Ingredients</p>
+      <ul class="list product-ingredients__list">
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Vanilla ice cream</p>
+          <p class="product-ingredients__quantity">200g</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Milk</p>
+          <p class="product-ingredients__quantity">500ml</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Cream</p>
+          <p class="product-ingredients__quantity">100ml</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">White chocolate</p>
+          <p class="product-ingredients__quantity">30g</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Cherry</p>
+          <p class="product-ingredients__quantity">1pc</p>
+        </li>
+        <li class="product-ingredients__item">
+          <p class="product-ingredients__name">Sprinkles</p>
+          <p class="product-ingredients__quantity">5g</p>
         </li>
       </ul>
       <!-- Form -->

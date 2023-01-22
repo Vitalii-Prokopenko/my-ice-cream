@@ -1,0 +1,36 @@
+/* === FRANCHISE === */
+.modal {
+  &__container-franchise {
+    padding: 28px;
+    width: 100%;
+
+    @include tablet-and-desktop {
+      padding: 32px 60px;
+    }
+  }
+
+  &__title-franchise {
+    margin-bottom: 20px;
+
+    @include tablet-and-desktop {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-franchise__text {
+    margin-bottom: 24px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+
+    color: $secondaryColor;
+
+    @include tablet-and-desktop {
+      margin-bottom: 32px;
+
+      font-size: 16px;
+      line-height: calc(22 / 16);
+    }
+  }
+}

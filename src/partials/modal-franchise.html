@@ -1,66 +1,27 @@
-<!-- === MODAL WINDOWS === -->
-<!-- BUY NOW -->
-<div class="backdrop is-hidden js-overlay-modal">
-  <div class="modal" data-modal="1">
-    <div class="modal__container modal__container-buy-now">
+<!-- === FRANCHISE === -->
+<div class="backdrop is-hidden">
+  <div class="modal">
+    <div class="modal__container modal__container-franchise">
       <!-- Close button -->
-      <button class="btn modal__close-btn js-modal-close">
+      <button class="btn modal__close-btn">
         <svg class="modal__close-icon" width="20" height="20">
           <use href="./images/icons/svg-icons.svg#icon-modal-cross"></use>
         </svg>
       </button>
       <!-- Title -->
-      <p class="modal__title modal__title-products">Buy now</p>
+      <p class="modal__title modal__title-franchise">
+        Thank you for your interest in owning an Ice Cream shop
+      </p>
+      <!-- Text -->
+      <p class="modal-franchise__text">
+        Due to the overwhelming volume of franchise requests we are not
+        accepting new franchisee applications at this time. Once the application
+        process resumes, we will contact you for further information. Please
+        fill out the contact information below and we will reach out for
+        additional information. We appreciate your patience.
+      </p>
       <!-- Form -->
       <form class="modal__form">
-        <!-- Check-boxes -->
-        <ul class="list modal__form-checkbox-list">
-          <li class="modal__form-item">
-            <label for="ice-cream">
-              <input
-                class="modal__product-checkbox ice-cream"
-                type="checkbox"
-                id="ice-cream"
-              />
-              <div class="modal__product-item modal__product-item--green">
-                <div
-                  class="modal__product-circle modal__product-circle--green"
-                ></div>
-                <p class="modal__product-name">Ice Cream</p>
-              </div>
-            </label>
-          </li>
-          <li class="modal__form-item">
-            <label for="ice-coffee">
-              <input
-                class="modal__product-checkbox ice-coffee"
-                type="checkbox"
-                id="ice-coffee"
-              />
-              <div class="modal__product-item modal__product-item--yellow">
-                <div
-                  class="modal__product-circle modal__product-circle--yellow"
-                ></div>
-                <p class="modal__product-name">Ice Coffee</p>
-              </div>
-            </label>
-          </li>
-          <li class="modal__form-item">
-            <label for="milkshake">
-              <input
-                class="modal__product-checkbox milkshake"
-                type="checkbox"
-                id="milkshake"
-              />
-              <div class="modal__product-item modal__product-item--chocolate">
-                <div
-                  class="modal__product-circle modal__product-circle--chocolate"
-                ></div>
-                <p class="modal__product-name">Milkshake</p>
-              </div>
-            </label>
-          </li>
-        </ul>
         <ul class="list modal__form-input-list">
           <li class="modal__form-input-item">
             <div class="modal__form-field">
@@ -88,6 +49,21 @@
                 placeholder="Phone"
                 pattern="\(?(\d{3})\)?[-\s]?(\d{3})[-\s]?(\d{2})[-\s]?(\d{2})"
                 title="Type (000) 000-00-00 or (000) 000 00 00"
+                required
+              />
+            </div>
+          </li>
+          <li class="modal__form-input-item">
+            <div class="modal__form-field">
+              <label for="user-email"></label>
+              <input
+                class="modal__form-input"
+                type="email"
+                name="user-email"
+                id="user-email"
+                placeholder="Email"
+                pattern="\A\S+@\S+\Z"
+                title="Type email@domain"
                 required
               />
             </div>
