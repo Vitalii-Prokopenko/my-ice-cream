@@ -1,118 +1,116 @@
 <!-- === MODAL WINDOWS === -->
 <!-- BUY NOW -->
-<div class="backdrop js-overlay-modal">
-  <div class="modal" data-modal="1">
-    <div class="modal__container modal__container-buy-now">
-      <!-- Close button -->
-      <button class="btn modal__close-btn js-modal-close">
-        <svg class="modal__close-icon" width="20" height="20">
-          <use href="./images/icons/svg-icons.svg#icon-modal-cross"></use>
-        </svg>
-      </button>
-      <!-- Title -->
-      <p class="modal__title modal__title-products">Buy now</p>
-      <!-- Form -->
-      <form class="modal__form">
-        <!-- Check-boxes -->
-        <ul class="list modal__form-checkbox-list">
-          <li class="modal__form-item">
-            <label for="ice-cream">
-              <input
-                class="modal__product-checkbox ice-cream"
-                type="checkbox"
-                id="ice-cream"
-              />
-              <div class="modal__product-item modal__product-item--green">
-                <div
-                  class="modal__product-circle modal__product-circle--green"
-                ></div>
-                <p class="modal__product-name">Ice Cream</p>
-              </div>
-            </label>
-          </li>
-          <li class="modal__form-item">
-            <label for="ice-coffee">
-              <input
-                class="modal__product-checkbox ice-coffee"
-                type="checkbox"
-                id="ice-coffee"
-              />
-              <div class="modal__product-item modal__product-item--yellow">
-                <div
-                  class="modal__product-circle modal__product-circle--yellow"
-                ></div>
-                <p class="modal__product-name">Ice Coffee</p>
-              </div>
-            </label>
-          </li>
-          <li class="modal__form-item">
-            <label for="milkshake">
-              <input
-                class="modal__product-checkbox milkshake"
-                type="checkbox"
-                id="milkshake"
-              />
-              <div class="modal__product-item modal__product-item--chocolate">
-                <div
-                  class="modal__product-circle modal__product-circle--chocolate"
-                ></div>
-                <p class="modal__product-name">Milkshake</p>
-              </div>
-            </label>
-          </li>
-        </ul>
-        <ul class="list modal__form-input-list">
-          <li class="modal__form-input-item">
-            <div class="modal__form-field">
-              <label for="user-name"></label>
-              <input
-                class="modal__form-input"
-                type="text"
-                name="user-name"
-                id="user-name"
-                placeholder="Name"
-                pattern="[A-Z][a-z]{1,20}"
-                title="Type your name in English, start with uppercase letter and do not exceed 20 letters"
-                required
-              />
+<div class="modal" data-modal="1">
+  <div class="modal__container modal__container-buy-now">
+    <!-- Close button -->
+    <button class="btn modal__close-btn js-modal-close">
+      <svg class="modal__close-icon" width="20" height="20">
+        <use href="./images/icons/svg-icons.svg#icon-modal-cross"></use>
+      </svg>
+    </button>
+    <!-- Title -->
+    <p class="modal__title modal__title-products">Buy now</p>
+    <!-- Form -->
+    <form class="modal__form">
+      <!-- Check-boxes -->
+      <ul class="list modal__form-checkbox-list">
+        <li class="modal__form-item">
+          <label for="ice-cream">
+            <input
+              class="modal__product-checkbox ice-cream"
+              type="checkbox"
+              id="ice-cream"
+            />
+            <div class="modal__product-item modal__product-item--green">
+              <div
+                class="modal__product-circle modal__product-circle--green"
+              ></div>
+              <p class="modal__product-name">Ice Cream</p>
             </div>
-          </li>
-          <li class="modal__form-input-item">
-            <div class="modal__form-field">
-              <label for="user-phone"></label>
-              <input
-                class="modal__form-input"
-                type="tel"
-                name="user-phone"
-                id="user-phone"
-                placeholder="Phone"
-                pattern="\(?(\d{3})\)?[-\s]?(\d{3})[-\s]?(\d{2})[-\s]?(\d{2})"
-                title="Type (000) 000-00-00 or (000) 000 00 00"
-                required
-              />
+          </label>
+        </li>
+        <li class="modal__form-item">
+          <label for="ice-coffee">
+            <input
+              class="modal__product-checkbox ice-coffee"
+              type="checkbox"
+              id="ice-coffee"
+            />
+            <div class="modal__product-item modal__product-item--yellow">
+              <div
+                class="modal__product-circle modal__product-circle--yellow"
+              ></div>
+              <p class="modal__product-name">Ice Coffee</p>
             </div>
-          </li>
-          <li class="modal__form-input-item">
-            <div class="modal__form-field">
-              <label for="user-name"></label>
-              <textarea
-                class="modal__form-input comment"
-                type="text"
-                name="comment"
-                id="user-comment"
-                placeholder="Comment"
-              ></textarea>
+          </label>
+        </li>
+        <li class="modal__form-item">
+          <label for="milkshake">
+            <input
+              class="modal__product-checkbox milkshake"
+              type="checkbox"
+              id="milkshake"
+            />
+            <div class="modal__product-item modal__product-item--chocolate">
+              <div
+                class="modal__product-circle modal__product-circle--chocolate"
+              ></div>
+              <p class="modal__product-name">Milkshake</p>
             </div>
-          </li>
-        </ul>
+          </label>
+        </li>
+      </ul>
+      <ul class="list modal__form-input-list">
+        <li class="modal__form-input-item">
+          <div class="modal__form-field">
+            <label for="user-name"></label>
+            <input
+              class="modal__form-input"
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder="Name"
+              pattern="[A-Z][a-z]{1,20}"
+              title="Type your name in English, start with uppercase letter and do not exceed 20 letters"
+              required
+            />
+          </div>
+        </li>
+        <li class="modal__form-input-item">
+          <div class="modal__form-field">
+            <label for="user-phone"></label>
+            <input
+              class="modal__form-input"
+              type="tel"
+              name="user-phone"
+              id="user-phone"
+              placeholder="Phone"
+              pattern="\(?(\d{3})\)?[-\s]?(\d{3})[-\s]?(\d{2})[-\s]?(\d{2})"
+              title="Type (000) 000-00-00 or (000) 000 00 00"
+              required
+            />
+          </div>
+        </li>
+        <li class="modal__form-input-item">
+          <div class="modal__form-field">
+            <label for="user-name"></label>
+            <textarea
+              class="modal__form-input comment"
+              type="text"
+              name="comment"
+              id="user-comment"
+              placeholder="Comment"
+            ></textarea>
+          </div>
+        </li>
+      </ul>
 
-        <!-- Submit button -->
-        <div class="modal__form-field">
-          <button type="submit" class="btn submit-btn modal__submit-button">
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
+      <!-- Submit button -->
+      <div class="modal__form-field">
+        <button type="submit" class="btn submit-btn modal__submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
   </div>
 </div>

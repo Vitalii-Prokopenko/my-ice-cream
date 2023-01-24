@@ -31,18 +31,47 @@
 
 /* === COMMON STYLES OF MODAL WINDOWS === */
 .modal {
-  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  overflow-y: scroll;
+
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   margin: 0 auto;
   width: 280px;
+  max-height: 94%;
   background-color: $phoneContactColor;
-  outline: 1px solid crimson;
+  border: 1px solid $modalBorderColor;
+  border-radius: 5px;
 
   @include tablet-and-desktop {
     width: 568px;
+  }
+
+  // Custom scroll-bar
+  /* width */
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: $disabledColor;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: crimson;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: yellow;
   }
 
   &__container {
