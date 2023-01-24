@@ -164,7 +164,17 @@
     }
   }
 
-  &__text {
+  &__text-wrap {
+    position: relative;
+  }
+
+  &__details-text {
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
     margin-bottom: 12px;
     width: 139px;
 
@@ -183,10 +193,56 @@
       line-height: calc(20 / 14);
     }
 
-    &-icon {
-      fill: $mainColor;
+    transition: $myTransformTransition;
+  }
+
+  &__details[open] {
+    transform: translateY(-100%);
+  }
+
+  &__summary-arrow {
+    cursor: pointer;
+    fill: $mainColor;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 40px;
+      height: 16px;
+
+      // background-image: url(./images/icons/svg-icons.svg#icon-long-arrow);
+
+      background-size: contain;
     }
   }
+
+  // &__text {
+  //   margin-bottom: 12px;
+  //   width: 139px;
+
+  //   font-weight: 400;
+  //   font-size: 12px;
+  //   line-height: calc(17 / 12);
+
+  //   color: $mainColor;
+
+  //   @include only-desktop {
+  //     margin-top: 29px;
+  //     margin-bottom: 24px;
+  //     width: 200px;
+
+  //     font-size: 14px;
+  //     line-height: calc(20 / 14);
+  //   }
+
+  //   &-icon {
+  //     fill: $mainColor;
+  //   }
+  // }
 
   // Outlets
 
