@@ -95,6 +95,7 @@
 
     display: flex;
     align-items: center;
+    z-index: 99;
 
     @include only-tablet {
       margin-bottom: 12px;
@@ -153,6 +154,8 @@
   }
 
   &__plate-img {
+    animation: spin 5s linear;
+
     @include only-tablet {
       width: 152px;
       height: 152px;
@@ -168,16 +171,9 @@
     position: relative;
   }
 
-  &__details-text {
-    cursor: pointer;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    margin-bottom: 12px;
+  &__details {
+    z-index: 99;
     width: 139px;
-
     font-weight: 400;
     font-size: 12px;
     line-height: calc(17 / 12);
@@ -185,10 +181,7 @@
     color: $mainColor;
 
     @include only-desktop {
-      margin-top: 29px;
-      margin-bottom: 24px;
       width: 200px;
-
       font-size: 14px;
       line-height: calc(20 / 14);
     }
@@ -197,52 +190,16 @@
   }
 
   &__details[open] {
-    transform: translateY(-100%);
+    // animation: details-animation 0.5s ease-in-out;
   }
 
-  &__summary-arrow {
+  &__summary {
+    z-index: 99;
     cursor: pointer;
+    display: list-item;
     fill: $mainColor;
-
-    &::after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 40px;
-      height: 16px;
-
-      // background-image: url(./images/icons/svg-icons.svg#icon-long-arrow);
-
-      background-size: contain;
-    }
+    list-style-image: url('../images/icons/long-arrow-40-1.svg');
   }
-
-  // &__text {
-  //   margin-bottom: 12px;
-  //   width: 139px;
-
-  //   font-weight: 400;
-  //   font-size: 12px;
-  //   line-height: calc(17 / 12);
-
-  //   color: $mainColor;
-
-  //   @include only-desktop {
-  //     margin-top: 29px;
-  //     margin-bottom: 24px;
-  //     width: 200px;
-
-  //     font-size: 14px;
-  //     line-height: calc(20 / 14);
-  //   }
-
-  //   &-icon {
-  //     fill: $mainColor;
-  //   }
-  // }
 
   // Outlets
 
@@ -348,5 +305,25 @@
     z-index: 2;
 
     width: 100%;
+  }
+}
+
+@keyframes details-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

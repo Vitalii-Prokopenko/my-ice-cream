@@ -657,6 +657,7 @@ footer {
   margin-bottom: 19px;
   display: flex;
   align-items: center;
+  z-index: 99;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__button-list {
@@ -689,6 +690,10 @@ footer {
     margin-right: 16px;
   }
 }
+.hero__plate-img {
+  -webkit-animation: spin 5s linear;
+          animation: spin 5s linear;
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__plate-img {
     width: 152px;
@@ -701,25 +706,31 @@ footer {
     height: 225px;
   }
 }
-.hero__text {
-  margin-bottom: 12px;
+.hero__text-wrap {
+  position: relative;
+}
+.hero__details {
+  z-index: 99;
   width: 139px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.4166666667;
   color: #fcfcfc;
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
-  .hero__text {
-    margin-top: 29px;
-    margin-bottom: 24px;
+  .hero__details {
     width: 200px;
     font-size: 14px;
     line-height: 1.4285714286;
   }
 }
-.hero__text-icon {
+.hero__summary {
+  z-index: 99;
+  cursor: pointer;
+  display: list-item;
   fill: #fcfcfc;
+  list-style-image: url("../images/icons/long-arrow-40-1.svg");
 }
 .hero__outlet-list {
   margin-top: 14px;
@@ -819,6 +830,39 @@ footer {
   width: 100%;
 }
 
+@-webkit-keyframes details-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes details-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* === PRODUCTS ===*/
 .products {
   text-align: center;
@@ -2107,19 +2151,42 @@ footer {
 
 /* === COMMON STYLES OF MODAL WINDOWS === */
 .modal {
-  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  overflow-y: auto;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
   width: 280px;
+  max-height: 94%;
   background-color: #ffffff;
-  outline: 1px solid crimson;
+  border: 1px solid #4e6c50;
+  border-radius: 5px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 @media screen and (min-width: 768px) {
   .modal {
     width: 568px;
   }
+}
+.modal::-webkit-scrollbar {
+  width: 10px;
+}
+.modal::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: #ababab;
+}
+.modal::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #efd478;
+}
+.modal::-webkit-scrollbar-thumb:hover {
+  background-color: #d6936d;
 }
 .modal__container {
   position: relative;
