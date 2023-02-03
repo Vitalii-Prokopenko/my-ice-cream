@@ -106,20 +106,6 @@
     }
   }
 
-  &__button-item {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-
-    // width: 108px;
-    // height: 38px;
-
-    // @include only-desktop {
-    //   width: 134px;
-    //   height: 42px;
-    // }
-  }
-
   &__button-item:not(:last-child) {
     margin-right: 12px;
   }
@@ -187,10 +173,6 @@
     }
 
     transition: $myTransformTransition;
-  }
-
-  &__details[open] {
-    // animation: details-animation 0.5s ease-in-out;
   }
 
   &__summary {
