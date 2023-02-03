@@ -58,3 +58,8 @@ $thumbDiameterDesktop: 302px;
 $colorGreen: #aec6a5;
 $colorYellow: #efd478;
 $colorChocolate: #d6936d;
+
+// Gallery animation
+$animationTime: 7s;
+$numberGalleryImages: 3;
+$percentPerImage: calc(100 / $numberGalleryImages);
