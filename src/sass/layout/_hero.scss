@@ -13,21 +13,18 @@
     height: 560px;
   }
 
-  // Header-container
+  // Hero-container
 
   &__container {
+    position: relative;
     padding-top: 38px;
-
     display: flex;
     flex-direction: column;
-
     height: 100%;
 
     @include tablet-and-desktop {
-      position: relative;
-
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
     }
 
     @include only-tablet {
@@ -39,17 +36,34 @@
     }
   }
 
-  // Wrap for left-side elements
+  // Elements hidden for mobile screens
+
+  &__plate-picture,
+  &__details,
+  &__outlet-list {
+    @include less-then-tablet {
+      display: none;
+    }
+  }
+
+  // Wrap for text content and button-styled links
 
   &__wrap {
-    max-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
+  // Wrap for left-side elements
+
+  &__left-wrap {
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  // Page title h1
+  // Page title
 
   &__page-title {
     margin-bottom: 32px;
@@ -70,7 +84,6 @@
 
     @include only-desktop {
       margin-bottom: 28px;
-
       width: 367px;
 
       font-size: 38px;
@@ -88,7 +101,7 @@
     }
   }
 
-  // Buttons
+  // Button-styled links
 
   &__button-list {
     margin-bottom: 19px;
@@ -110,80 +123,7 @@
     margin-right: 12px;
   }
 
-  // Wrap for plate with ice-creams and text
-
-  &__plate-wrap {
-    display: flex;
-    align-items: center;
-  }
-
-  // Elements hidden for mobile screens
-
-  &__plate-picture,
-  &__text-wrap,
-  &__outlet-list {
-    @include less-then-tablet {
-      display: none;
-    }
-  }
-
-  // Plate with ice-creams
-
-  &__plate-picture {
-    z-index: 3;
-
-    margin-right: 32px;
-
-    @include only-desktop {
-      margin-right: 16px;
-    }
-  }
-
-  &__plate-img {
-    animation: spin 5s linear;
-
-    @include only-tablet {
-      width: 152px;
-      height: 152px;
-    }
-
-    @include only-desktop {
-      width: 225px;
-      height: 225px;
-    }
-  }
-
-  &__text-wrap {
-    position: relative;
-  }
-
-  &__details {
-    z-index: 99;
-    width: 139px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: calc(17 / 12);
-
-    color: $mainColor;
-
-    @include only-desktop {
-      width: 200px;
-      font-size: 14px;
-      line-height: calc(20 / 14);
-    }
-
-    transition: $myTransformTransition;
-  }
-
-  &__summary {
-    z-index: 99;
-    cursor: pointer;
-    display: list-item;
-    fill: $mainColor;
-    list-style-image: url('../images/icons/long-arrow-40-1.svg');
-  }
-
-  // Outlets
+  // Outlets (right-side elements)
 
   &__outlet-list {
     margin-top: 14px;
@@ -235,39 +175,20 @@
     }
   }
 
-  // Wrap for absolutely positioned images
+  // Absolutely positioned images
 
-  &__img-wrap {
-    margin: 0 auto;
-    position: relative;
-    width: 320px;
-    height: 217px;
-
-    @include only-tablet {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 768px;
-      height: 329px;
-    }
-
-    @include only-desktop {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 1200px;
-      height: 560px;
-    }
+  &__img-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 
   &__img-ice-cream {
     position: absolute;
     bottom: 0;
-    left: 26%;
-    z-index: 3;
-
+    left: 83px;
+    z-index: 2;
     width: 177px;
-    height: 100%;
 
     @include only-tablet {
       width: 268px;
@@ -280,26 +201,77 @@
     }
   }
 
-  &__img-dots {
+  // Plate with ice-creams
+
+  &__plate-picture {
     position: absolute;
-    bottom: 0;
-    left: 0;
     z-index: 2;
+    margin-right: 32px;
 
-    width: 100%;
+    @include only-tablet {
+      left: 32px;
+      bottom: 12px;
+    }
+
+    @include only-desktop {
+      left: 16px;
+      bottom: 65px;
+      margin-right: 16px;
+    }
+  }
+
+  &__plate-img {
+    animation: spin 5s linear;
+
+    @include only-tablet {
+      width: 152px;
+      height: 152px;
+    }
+
+    @include only-desktop {
+      width: 225px;
+      height: 225px;
+    }
+  }
+
+  // Details
+
+  &__details {
+    position: absolute;
+    z-index: 99;
+
+    font-weight: 400;
+    color: $mainColor;
+
+    @include only-tablet {
+      left: 216px;
+      bottom: 24px;
+
+      width: 139px;
+      font-size: 12px;
+      line-height: calc(17 / 12);
+    }
+
+    @include only-desktop {
+      left: 257px;
+      bottom: 103px;
+
+      width: 200px;
+      font-size: 14px;
+      line-height: calc(20 / 14);
+    }
+  }
+
+  &__summary {
+    z-index: 99;
+    cursor: pointer;
+    display: list-item;
+    fill: $mainColor;
+    list-style-image: url('../images/icons/long-arrow-40-1.svg');
   }
 }
 
-@keyframes details-animation {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
+/* Spin animation for plate in hero */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
