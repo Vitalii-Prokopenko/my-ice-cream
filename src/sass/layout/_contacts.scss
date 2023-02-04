@@ -83,6 +83,8 @@
 
     background-color: $secondaryBgColor;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    transition: $myBoxShadowTransition;
+    transition: $myTransformTransition;
 
     @include less-then-tablet {
       width: 280px;
@@ -94,6 +96,12 @@
 
     @include only-desktop {
       padding: 40px;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 8px 30px rgba($secondaryAccentColor, 0.5);
+      transform: scale(1.03);
     }
   }
 
@@ -232,8 +240,8 @@
     font-weight: 500;
     font-size: 12px;
     line-height: calc(19 / 12);
-
     color: $secondaryColor;
+    transition: $myBgColorTransition;
 
     @include only-tablet {
       font-size: 14px;
@@ -243,6 +251,11 @@
     @include only-desktop {
       font-size: 16px;
       line-height: calc(24 / 16);
+    }
+
+    &:hover,
+    &:focus {
+      color: $addressColor;
     }
   }
 
