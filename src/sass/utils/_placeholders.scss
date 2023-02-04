@@ -8,6 +8,8 @@
   border-radius: 10px;
 
   color: $buttonTextColor;
+  transition: $myColorTransition;
+  transition: $myBoxShadowTransition;
 
   &:focus {
     color: $mainColor;
@@ -23,10 +25,13 @@
   color: $secondaryColor;
 
   border: 2px solid $mainAccentColor;
+  transition: $myBorderColorTransition;
+  transition: $myBoxShadowTransition;
 
   &:hover,
   &:focus {
     border-color: $secondaryAccentColor;
+    box-shadow: 5px 5px 10px rgba($mainAccentColor, 0.5);
   }
 }
 
@@ -38,10 +43,15 @@
   background-color: $mainAccentColor;
   border: 2px solid $mainAccentColor;
 
+  transition: $myBorderColorTransition;
+  transition: $myBgColorTransition;
+  transition: $myBoxShadowTransition;
+
   &:hover,
   &:focus {
     background-color: $secondaryAccentColor;
     border-color: $secondaryAccentColor;
+    box-shadow: 5px 5px 10px rgba($mainAccentColor, 0.5);
   }
 }
 
@@ -52,6 +62,11 @@
 
   background-color: transparent;
   border: none;
+
+  &:hover,
+  &:focus {
+    text-shadow: 5px 5px 10px rgba($mainAccentColor, 0.5);
+  }
 }
 
 // Links styled as buttons
@@ -99,20 +114,24 @@
   }
 }
 
-// Product card positioned image
+// Product card positioned image (common styles)
 
 %product-img {
   content: '';
   position: absolute;
-  top: -11px;
   left: 0;
-
-  width: $thumbDiameterMobileTablet;
-  height: $thumbDiameterMobileTablet;
   border-radius: 50%;
-
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+// Product card positioned image
+
+%product-img-section {
+  @extend %product-img;
+  top: -11px;
+  width: $thumbDiameterMobileTablet;
+  height: $thumbDiameterMobileTablet;
 
   @include only-tablet {
     top: -12px;
@@ -120,7 +139,6 @@
 
   @include only-desktop {
     top: -16px;
-
     width: $thumbDiameterDesktop;
     height: $thumbDiameterDesktop;
   }
@@ -129,17 +147,10 @@
 // Product card positioned image for modal form
 
 %product-img-modal {
-  content: '';
-  position: absolute;
+  @extend %product-img;
   top: -7px;
-  left: 0;
-
   width: 132px;
   height: 132px;
-  border-radius: 50%;
-
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 // Advantages icons

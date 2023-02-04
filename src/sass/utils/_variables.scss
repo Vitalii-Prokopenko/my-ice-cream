@@ -1,10 +1,12 @@
 // === Variables ===
 
 // Fonts
+
 $mainFont: 'Montserrat', sans-serif;
 $secondaryFont: 'Seymour One', sans-serif;
 
 // Colors
+
 $mainColor: #fcfcfc;
 $secondaryColor: #131313;
 $mainAccentColor: #f8d24e;
@@ -18,14 +20,17 @@ $buttonTextColor: #000000;
 $paginationBulletColor: #d9d9d9;
 
 // Background colors
+
 $mainBgColor: #84a178;
 $secondaryBgColor: #fcfcfc;
 
 // Border colors
+
 $contactsBorderColor: #e1e1e1;
 $modalBorderColor: #4e6c50;
 
 // Breakpoints
+
 $minMobile: 480px;
 $minTablet: 768px;
 $minDesktop: 1200px;
@@ -34,12 +39,17 @@ $minDesktop: 1200px;
 $minScreen: 320px;
 
 // Transitions
-$myColorTransition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-$myBgColorTransition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-$myFillTransition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-$myTransformTransition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-$myBoxShadowTransition: box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-$myOpacityTransition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+$transitionTime: 250ms;
+$transitionFunction: cubic-bezier(0.4, 0, 0.2, 1);
+
+$myColorTransition: color $transitionTime $transitionFunction;
+$myBgColorTransition: background-color $transitionTime $transitionFunction;
+$myFillTransition: fill $transitionTime $transitionFunction;
+$myTransformTransition: transform $transitionTime $transitionFunction;
+$myBoxShadowTransition: box-shadow $transitionTime $transitionFunction;
+$myOpacityTransition: opacity $transitionTime $transitionFunction;
+$myBorderColorTransition: border-color $transitionTime $transitionFunction;
 
 // Container paddings
 
@@ -61,6 +71,7 @@ $colorYellow: #efd478;
 $colorChocolate: #d6936d;
 
 // Gallery animation
+
 $animationTime: 7s;
 $numberGalleryImages: 3;
 $percentPerImage: calc(100 / $numberGalleryImages);
