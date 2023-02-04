@@ -229,11 +229,6 @@ body {
   }
 }
 
-section:not(.hero, .products, .about, .advantages, .gallery),
-footer {
-  outline: 1px solid tomato;
-}
-
 .container {
   padding: 0 20px;
   margin-right: auto;

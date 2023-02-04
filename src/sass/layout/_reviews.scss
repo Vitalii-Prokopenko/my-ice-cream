@@ -68,51 +68,6 @@
     width: 100%;
   }
 
-  //   Container for each review
-
-  // &__list {
-  //   position: relative;
-
-  //   margin: 0 auto;
-
-  //   width: 280px;
-  //   height: 442px;
-
-  //   outline: 1px solid black;
-
-  //   @include only-tablet {
-  //     width: 704px;
-  //     height: 312px;
-  //   }
-
-  //   @include only-desktop {
-  //     width: 968px;
-  //     height: 317px;
-  //   }
-  // }
-
-  //   Review container
-
-  // &__item {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-
-  //   width: 100%;
-
-  //   &:nth-child(1) {
-  //     display: none;
-  //   }
-
-  //   &:nth-child(2) {
-  //     display: none;
-  //   }
-  // }
-
   //   Thumb for image
 
   &__thumb {
