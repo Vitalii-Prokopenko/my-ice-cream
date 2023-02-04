@@ -1575,13 +1575,13 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .reviews__swiper {
     width: 704px;
-    height: 312px;
+    height: 355px;
   }
 }
 @media screen and (min-width: 1200px) {
   .reviews__swiper {
     width: 968px;
-    height: 317px;
+    height: 361px;
   }
 }
 .reviews__swiper-wrapper {
