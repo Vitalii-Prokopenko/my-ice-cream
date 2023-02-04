@@ -465,9 +465,12 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__menu-link:hover, .header__menu-link:focus {
   color: #f8d24e;
+  transform: scale(1.1);
 }
 @media screen and (min-width: 1200px) {
   .header__menu-link {
@@ -497,6 +500,7 @@ body {
 }
 .mobile-menu-open__icon {
   fill: #ffffff;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu-open:hover .mobile-menu-open__icon, .mobile-menu-open:focus .mobile-menu-open__icon {
   fill: #f8d24e;

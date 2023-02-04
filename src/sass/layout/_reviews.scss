@@ -46,7 +46,7 @@
 
   &__swiper-pagination {
     margin-top: 12px;
-    @include flex-center;
+    @include flex-centered;
   }
 
   & .swiper-pagination-bullet {

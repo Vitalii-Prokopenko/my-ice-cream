@@ -7,9 +7,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-spaced-between;
 
     @include only-tablet {
       padding-top: 20px;
@@ -24,36 +22,11 @@
 
   &__nav {
     flex-basis: 69.5%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-spaced-between;
   }
 
-  // &__logo {
-  //   width: 40px;
-  //   height: 37px;
-
-  //   @include only-tablet {
-  //     width: 48px;
-  //     height: 44px;
-  //   }
-
-  //   @include only-desktop {
-  //     width: 60px;
-  //     height: 65px;
-  //   }
-  // }
-
-  // &__logo-img {
-  //   width: 100%;
-  //   height: 100%;
-  // }
-
   &__menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-centered;
 
     @include less-then-desktop {
       display: none;
@@ -68,10 +41,13 @@
     font-weight: 700;
     font-size: 16px;
     line-height: calc(20 / 16);
+    transition: $myColorTransition;
+    transition: $myTransformTransition;
 
     &:hover,
     &:focus {
       color: $mainAccentColor;
+      transform: scale(1.1);
     }
 
     @include only-desktop {
@@ -105,6 +81,7 @@
 
   &__icon {
     fill: $phoneContactColor;
+    transition: $myFillTransition;
   }
 
   &:hover &__icon,
