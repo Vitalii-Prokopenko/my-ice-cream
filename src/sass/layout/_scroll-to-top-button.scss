@@ -1,0 +1,46 @@
+#scroll-btn {
+  z-index: 999;
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  color: $mainColor;
+  background-color: $mainAccentColor;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: 2px solid $timeColor;
+  border-radius: 50%;
+  font: bold 20px monospace;
+  transition: opacity 500ms, transform 500ms;
+  transition: $myColorTransition, $myBgColorTransition;
+
+  @include tablet-and-desktop {
+    width: 60px;
+    height: 60px;
+    font: bold 40px monospace;
+  }
+
+  &:hover {
+    color: $mainAccentColor;
+    background-color: $mainColor;
+  }
+}
+
+#scroll-btn.show {
+  opacity: 1;
+  transition: opacity 1s, transform 1s;
+  animation: pulse 2s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
