@@ -608,6 +608,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .hero__container {
@@ -751,6 +752,9 @@ body {
   left: 83px;
   z-index: 2;
   width: 177px;
+  -webkit-animation: scaling 2s linear;
+          animation: scaling 2s linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__img-ice-cream {
@@ -764,10 +768,16 @@ body {
     left: 652px;
   }
 }
+.hero__img-ice-cream:hover {
+  transform: scale(1.1);
+}
 .hero__plate-picture {
   position: absolute;
   z-index: 2;
   margin-right: 32px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: spin 5s linear;
+          animation: spin 5s linear;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__plate-picture {
@@ -782,9 +792,8 @@ body {
     margin-right: 16px;
   }
 }
-.hero__plate-img {
-  -webkit-animation: spin 5s linear;
-          animation: spin 5s linear;
+.hero__plate-picture:hover {
+  transform: scale(1.1);
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__plate-img {
@@ -845,6 +854,29 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+/* Scale animation for ice-cream in hero */
+@-webkit-keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 /* === PRODUCTS ===*/

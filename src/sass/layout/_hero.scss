@@ -2,7 +2,6 @@
 
 .hero {
   height: 441px;
-
   background-color: $mainBgColor;
 
   @include only-tablet {
@@ -21,6 +20,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: hidden;
 
     @include tablet-and-desktop {
       flex-direction: row;
@@ -189,6 +189,8 @@
     left: 83px;
     z-index: 2;
     width: 177px;
+    animation: scaling 2s linear;
+    transition: $myTransformTransition;
 
     @include only-tablet {
       width: 268px;
@@ -199,6 +201,10 @@
       width: 456px;
       left: 652px;
     }
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   // Plate with ice-creams
@@ -207,6 +213,8 @@
     position: absolute;
     z-index: 2;
     margin-right: 32px;
+    transition: $myTransformTransition;
+    animation: spin 5s linear;
 
     @include only-tablet {
       left: 32px;
@@ -218,11 +226,13 @@
       bottom: 65px;
       margin-right: 16px;
     }
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__plate-img {
-    animation: spin 5s linear;
-
     @include only-tablet {
       width: 152px;
       height: 152px;
@@ -272,6 +282,7 @@
 }
 
 /* Spin animation for plate in hero */
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -279,5 +290,21 @@
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Scale animation for ice-cream in hero */
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
