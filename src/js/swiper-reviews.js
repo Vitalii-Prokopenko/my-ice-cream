@@ -1,7 +1,5 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  // wrapperClass: 'hero__swiper-wrapper',
-  // slideClass: 'hero__swiper-slide',
   direction: 'horizontal',
   loop: true,
   centeredSlides: true,
@@ -32,8 +30,6 @@ const swiper = new Swiper('.swiper', {
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
-    // bulletClass: 'hero__swiper-pagination-bullet',
-    // bulletActiveClass: 'hero__swiper-pagination-bullet-active',
   },
 
   // Navigation arrows
