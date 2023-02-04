@@ -993,15 +993,27 @@ body {
 }
 .products__item--green {
   background-color: #aec6a5;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.products__item--green:hover .products__circle {
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.75);
 }
 .products__item--yellow {
   background-color: #efd478;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.products__item--yellow:hover .products__circle {
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.75);
 }
 .products__item--brown {
   background-color: #d6936d;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.products__item--brown:hover .products__circle {
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.75);
 }
 .products__item:hover {
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5);
 }
 .products__circle {
   position: absolute;
