@@ -61,6 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
+      // Stops video from yuotube when modal is closed
+      var videoEmbed = document.querySelector('.modal-about__video');
+      videoEmbed.setAttribute('src', "")
     });
   }); // end foreach
 
