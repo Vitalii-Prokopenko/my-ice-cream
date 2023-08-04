@@ -1,10 +1,5 @@
 const scrollTop = function () {
-  // create HTML button element
-  // &uarr;
-  const scrollBtn = document.createElement('button');
-  scrollBtn.innerHTML = '&#8686;';
-  scrollBtn.setAttribute('id', 'scroll-btn');
-  document.body.appendChild(scrollBtn);
+  const scrollBtn = document.querySelector('#scroll-btn');
   // hide/show button based on scroll distance
   const scrollBtnDisplay = function () {
     window.scrollY > window.innerHeight

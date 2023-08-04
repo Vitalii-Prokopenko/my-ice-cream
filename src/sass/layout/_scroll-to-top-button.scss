@@ -3,25 +3,21 @@
   opacity: 0;
   width: 40px;
   height: 40px;
-  color: $mainColor;
   background-color: $mainAccentColor;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  border: 2px solid $timeColor;
+  border: 2px solid $secondaryAccentColor;
   border-radius: 50%;
-  font: bold 20px monospace;
   transition: opacity 500ms, transform 500ms;
-  transition: $myColorTransition, $myBgColorTransition;
+  transition: $myFillTransition, $myBgColorTransition;
 
   @include tablet-and-desktop {
     width: 60px;
     height: 60px;
-    font: bold 40px monospace;
   }
 
   &:hover {
-    color: $mainAccentColor;
     background-color: $mainColor;
   }
 }
@@ -33,12 +29,27 @@
   animation-iteration-count: infinite;
 }
 
+.btn__icon {
+  width: 30px;
+  height: 25px;
+  fill: $mainColor;
+
+  @include tablet-and-desktop {
+    width: 40px;
+    height: 35px;
+  }
+
+  &:hover {
+    fill: $mainAccentColor;
+  }
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);
