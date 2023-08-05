@@ -189,16 +189,19 @@
     left: 83px;
     z-index: 2;
     width: 177px;
+    height: 217px;
     animation: scaling 2s linear;
     transition: $myTransformTransition;
 
     @include only-tablet {
       width: 268px;
+      height: 329px;
       left: 408px;
     }
 
     @include only-desktop {
       width: 456px;
+      height: 560px;
       left: 652px;
     }
 
