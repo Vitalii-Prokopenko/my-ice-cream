@@ -1,4 +1,4 @@
-import bodyScrollLock, {
+import {
   enableBodyScroll,
   disableBodyScroll,
 } from 'body-scroll-lock';

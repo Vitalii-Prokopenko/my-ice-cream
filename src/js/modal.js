@@ -1,3 +1,10 @@
+import {
+  enableBodyScroll,
+  disableBodyScroll,
+} from 'body-scroll-lock';
+
+let targetElement;
+
 !(function (e) {
   'function' != typeof e.matches &&
     (e.matches =
@@ -52,6 +59,9 @@ document.addEventListener('DOMContentLoaded', function () {
             подложке и окну чтобы показать их. */
       modalElem.classList.add('active');
       overlay.classList.add('active');
+
+      // disables body scroll when modal window is open
+      disableBodyScroll(modalElem);
     }); // end click
   }); // end foreach
 
@@ -61,7 +71,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
-      // Stops video from yuotube when modal is closed
+
+      // enables body scroll when modal window is closed
+        enableBodyScroll(parentModal);
+      // Stops video from youtube when modal is closed
       var videoEmbed = document.querySelector('.modal-about__video');
       videoEmbed.setAttribute('src', "")
     });
