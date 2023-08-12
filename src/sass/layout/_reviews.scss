@@ -22,10 +22,6 @@
     width: 300px;
     height: 478px;
 
-    @include less-then-desktop {
-      margin-left: -5px;
-    }
-
     @include only-tablet {
       width: 704px;
       height: 355px;
